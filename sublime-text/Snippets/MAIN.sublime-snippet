@@ -1,0 +1,6 @@
+<snippet>
+	<description>Cout</description>
+    <content><![CDATA[cout << ${1:/* text */}${0: << endl};]]></content>
+    <tabTrigger>cout</tabTrigger>
+    <scope>source.c++, source.objc++</scope>
+</snippet>

@@ -1,0 +1,14 @@
+<snippet>
+	<description>Teste</description>
+    <content><![CDATA[#include <iostream>
+#include <list>
+#include <algorithm>
+using namespace std;
+
+int main(){
+	${0:/* code */}
+	
+}]]></content>
+    <tabTrigger>teste</tabTrigger>
+    <scope>source.cpp, source.c++</scope>
+</snippet>

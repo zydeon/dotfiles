@@ -1,0 +1,56 @@
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set shiftwidth=4
+set number
+
+" Do not cycle search
+set nowrapscan
+
+" Set config for git commits
+autocmd Filetype gitcommit setlocal spell textwidth=72 colorcolumn=72
+
+" Remap ; to : to avoid pressing shift
+nnoremap ; :
+
+
+" Map <C-s-p> into toggling spell check
+map <silent> <F6> <Esc>:call ToggleSpell()<CR>
+function! ToggleSpell()
+	if &spell
+		set nospell
+	else
+		set spell
+	endif
+endfunction
+
+
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+set colorcolumn=80
+syntax on
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+if has("mouse")
+	set mouse=a
+
+	function SmoothScroll(up)
+		if a:up
+			let scrollaction="^Y"
+		else
+			let scrollaction="^E"
+		endif
+		exec "normal " . scrollaction
+		redraw
+		let counter=1
+		while counter<&scroll
+			let counter+=1
+			sleep 10m
+			redraw
+			exec "normal " . scrollaction
+		endwhile
+	endfunction
+
+	map <ScrollWheelUp> <C-Y>
+	map <ScrollWheelDown> <C-E>
+
+endif
+set ai
+set incsearch
+filetype plugin on

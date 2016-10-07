@@ -1,0 +1,15 @@
+Host dei
+	HostName student.dei.uc.pt
+	User pamatias
+Host mosal-old
+	HostName mosal-old.dei.uc.pt
+	User pedromatias
+Host mosal
+    HostName mosal.dei.uc.pt
+	User admin
+Host chalmers
+	HostName remote1.student.chalmers.se
+	User mpedro
+Host ics
+	HostName openlab.ics.uci.edu
+	User pmatias

@@ -1,0 +1,12 @@
+<snippet>
+	<description>Teste</description>
+    <content><![CDATA[#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char const *argv[]){
+	${0:/* code */}
+	return 0;
+}]]></content>
+    <tabTrigger>teste</tabTrigger>
+    <scope>source.c</scope>
+</snippet>

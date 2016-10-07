@@ -1,0 +1,18 @@
+[
+	{ "keys": ["super+shift+r"], "command": "auto_indent" },
+	{ "keys": ["shift+super+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+	{ "keys": ["super+backspace"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
+  { "keys": ["super+ctrl+c"], "command": "copy_path"},
+
+  // latex commands
+  { "keys": ["super+i"], "command": "to_italic"},
+  { "keys": ["super+b"], "command": "to_bold"},
+  { "keys": ["super+u"], "command": "to_underline"},
+  { "keys": ["super+t"], "command": "to_text"},
+  { "keys": ["super+m"], "command": "to_math"},
+  { "keys": ["super+e"], "command": "to_emph"},
+
+  // code formatter
+  { "keys": ["super+i"], "command": "code_formatter" }
+
+]

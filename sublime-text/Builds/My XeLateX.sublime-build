@@ -1,0 +1,9 @@
+{
+  "cmd": ["xelatex", "$file_name"],
+  "variants": [
+          {
+            "name": "Biber",
+            "cmd" : ["biber", "$file_base_name"]
+          }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+	"auto_upgrade_last_run": null,
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"1337 Color Scheme",
+		"Alignment",
+		"All Autocomplete",
+		"C++ Completions",
+		"Color Highlighter",
+		"DocBlockr",
+		"Dotfiles Syntax Highlighting",
+		"Git",
+		"GitGutter",
+		"GitHubinator",
+		"Go To Definition",
+		"HTML-CSS-JS Prettify",
+		"LaTeXTools",
+		"LiveReload",
+		"Markdown Preview",
+		"Package Control",
+		"Pretty JSON",
+		"SublimeOnSaveBuild",
+		"Theme - Solarized Space",
+		"TodoReview",
+		"TrailingSpaces"
+	]
+}

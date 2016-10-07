@@ -1,0 +1,33 @@
+{
+	"auto_find_in_selection": true,
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/Theme - Solarized Space/Solarized V (Light).tmTheme",
+	"dictionary": "Packages/Language - English/en_US.dic",
+	"enable_tab_scrolling": false,
+	"file_exclude_patterns":
+	[
+	],
+	"font_face": "Ubuntu Mono",
+	"font_options":
+	[
+		"subpixel_antialias",
+		"no_round"
+	],
+	"font_size": 16.0,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	"rulers":
+	[
+		80
+	],
+	"scroll_past_end": true,
+	"show_minimap": false,
+	"spell_check": false,
+	"tab_size": 4,
+	"theme": "Solarized Space Light.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
