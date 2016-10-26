@@ -1,5 +1,7 @@
 [
-	{ "keys": ["super+shift+r"], "command": "auto_indent" },
+  // Auto indent
+	// { "keys": ["super+shift+r"], "command": "auto_indent" },
+
 	{ "keys": ["shift+super+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 	{ "keys": ["super+backspace"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
   { "keys": ["super+ctrl+c"], "command": "copy_path"},
@@ -13,6 +15,9 @@
   { "keys": ["super+e"], "command": "to_emph"},
 
   // code formatter
-  { "keys": ["super+i"], "command": "code_formatter" }
+  { "keys": ["super+i"], "command": "code_formatter" },
+
+  // Close all files
+  { "keys": ["super+alt+w"], "command": "close_all" }
 
 ]

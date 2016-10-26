@@ -1,0 +1,9 @@
+{
+	"csv_per_file_setting":
+	[
+		{
+			"file": "/Users/zydeon/University/PhD/Teaching/CS161/HW1/grades.csv",
+			"use_header": true
+		}
+	]
+}

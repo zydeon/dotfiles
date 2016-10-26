@@ -1,0 +1,8 @@
+<snippet>
+	<description>For each loop (Matias)</description>
+    <content><![CDATA[for (auto &${1:e}: ${2:container}) {
+	${0:/* code */}
+}]]></content>
+    <tabTrigger>foreach</tabTrigger>
+    <scope>source.c, source.objc, source.c++, source.objc++, source.java</scope>
+</snippet>

@@ -16,8 +16,8 @@
 		 --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" \
 		 --decorate --numstat
-	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" \
-		  --decorate --date=short -50
+	lds = log --pretty=format:"%C(yellow)%h\\ %ad%<|(24)%Cred%d\\ %Creset%s%Cblue\\ [%cn]" \
+		  --decorate --date=relative -50
         tree = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(normal)%s%C(reset) %C(dim black)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	ps = push
 	pl = pull

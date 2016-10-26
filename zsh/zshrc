@@ -68,9 +68,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 # Setup colors
-LS_COLORS='no=00;37:fi=00:di=00;33:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
-export LS_COLORS
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# LS_COLORS='no=00;37:fi=00:di=00;33:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
+# export LS_COLORS
+# zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 
 # You may need to manually set your language environment
@@ -105,12 +105,27 @@ alias sb='subl'
 alias egrep='egrep --color'
 alias grep='egrep'
 alias ql='qlmanage -p "$@" > /dev/null 2>&1'
-alias ifconfig='ifconfig | colout "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+"'
+alias ip='ifconfig | colout "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+"'
+
+### Functions
+function caskupg() {
+    if [[ $# -lt 1 ]]; then
+        echo "Usage: $0 <package>"
+        return 1
+    fi
+    brew cask list | grep $1 || return 1
+    (brew cask uninstall --force $1 && brew cask install $1) || return 1
+}
 
 # Delete to beginning of line
 bindkey \^U backward-kill-line
 # Delete next word
 bindkey \^D kill-word
+
+
+### Add to PATH
+PATH=$PATH:/Library/TeX/texbin
+
 
 ### Increase maximum size of history
 HISTSIZE=999999999
