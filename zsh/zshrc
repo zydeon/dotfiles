@@ -8,7 +8,7 @@ export ZSH=/Users/zydeon/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 DEFAULT_USER=`whoami`  # (for the theme to load)
 AGNOSTER_LIGHT=1
-ZSH_THEME="agnoster-jelly"
+ZSH_THEME="agnoster-light"
 
 
 # Uncomment the following line to use case-sensitive completion.
