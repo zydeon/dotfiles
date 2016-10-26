@@ -58,9 +58,6 @@ plugins=(git, zsh-autosuggestions)
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:~/bin"
-export PATH="$PATH:/Users/pmatias/bin"
-export PATH="/Users/pmatias/dev/depot_tools:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 ## Load custom plugins
 source $ZSH/oh-my-zsh.sh
