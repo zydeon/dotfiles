@@ -1,2 +1,4 @@
 set set stop-line-count-before 15
 set set stop-line-count-after 15
+
+command script import lldbinit
