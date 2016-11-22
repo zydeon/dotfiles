@@ -1,0 +1,18 @@
+<snippet>
+	<description>Empty Latex template</description>
+    <content><![CDATA[\documentclass[letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\title{${0: Title}}
+\author{${1: Author}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\end{document}]]></content>
+    <tabTrigger>main</tabTrigger>
+    <scope>source.tex</scope>
+</snippet>
