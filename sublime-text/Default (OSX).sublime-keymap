@@ -18,6 +18,10 @@
   { "keys": ["super+i"], "command": "code_formatter" },
 
   // Close all files
-  { "keys": ["super+alt+w"], "command": "close_all" }
+  { "keys": ["super+alt+w"], "command": "close_all" },
+
+  // Unbind shortcuts for Fn keys (used for Spotify global shortcuts)
+  { "keys": ["f7"], "command": "unbound" },
+  { "keys": ["f12"], "command": "unbound" }
 
 ]
