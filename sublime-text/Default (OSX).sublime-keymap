@@ -21,7 +21,7 @@
   { "keys": ["super+alt+w"], "command": "close_all" },
 
   // Unbind shortcuts for Fn keys (used for Spotify global shortcuts)
-  { "keys": ["f7"], "command": "unbound" },
-  { "keys": ["f12"], "command": "unbound" }
+  { "keys": ["f7"], "command": "noop" }
+  // { "keys": ["f12"], "command": "unbound" }
 
 ]
