@@ -19,7 +19,7 @@
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
-	<true/>
+	<false/>
 	<key>ClosingHotkeySwitchesSpaces</key>
 	<true/>
 	<key>CommandSelection</key>
@@ -327,19 +327,21 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>196 202 445 77 0 0 1280 777 </string>
+	<string>196 68 445 77 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 110 924 485 0 0 1280 800 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 139 606 456 0 0 1280 800 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>251 111 918 512 0 0 1280 800 </string>
+	<string>251 88 918 495 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>630 241 650 526 0 0 1280 777 </string>
+	<string>428 8 850 765 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>500 217 650 526 0 0 1280 800 </string>
+	<string>81 134 650 477 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>173 29 650 526 0 0 1280 800 </string>
+	<string>520 553 650 527 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>630 262 650 526 0 0 1280 800 </string>
+	<string>630 242 650 527 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>215 250 650 527 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_36CF9CC0-3A17-46FE-A5C5-7D41F91A4F02</key>
@@ -902,11 +904,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>MesloLGMDZ-RegularForPowerline 14</string>
+			<string>MesloLGMDZ-RegularForPowerline 13</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGMDZ-RegularForPowerline 14</string>
+			<string>MesloLGMDZ-RegularForPowerline 13</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1081,6 +1083,8 @@
 			<string>/Users/zydeon</string>
 		</dict>
 	</array>
+	<key>NoSyncConfirmBeta</key>
+	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
 	<true/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
@@ -1143,7 +1147,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/zydeon/dotfiles/iterm2</string>
+	<string>/Users/zydeon/.dotfiles/iterm2</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1159,7 +1163,7 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=2</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SUSendProfileInfo</key>
@@ -1201,6 +1205,6 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>2.1.4</string>
+	<string>3.0.8</string>
 </dict>
 </plist>
