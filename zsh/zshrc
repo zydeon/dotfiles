@@ -103,7 +103,7 @@ alias ll='ls -lh'
 alias la='ls -lAFh'
 alias tree='tree -CF'
 alias sb='subl'
-alias egrep='egrep --color'
+alias egrep='egrep --color=always'  # show colors when piping to less
 alias grep='egrep'
 alias ql='qlmanage -p "$@" > /dev/null 2>&1'
 alias ip='ifconfig | colout "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+"'
