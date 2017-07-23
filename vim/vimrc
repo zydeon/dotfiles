@@ -70,6 +70,13 @@ set ttyfast
 " Show matching braces when cursor is over them
 set showmatch
 
+" Allow switching between buffers without saving
+set hidden
+
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
 " Auto read when file is changed from outside
 " set autoread
 
