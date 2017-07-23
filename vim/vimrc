@@ -1,56 +1,180 @@
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
-set shiftwidth=4
-set number
+" Set leader key
+let mapleader = ","
+let g:mapleader = ","
 
-" Do not cycle search
-set nowrapscan
+" Remap ; to : to avoid pressing shift
+nnoremap ; :
+set backspace=indent,eol,start
+" Non-vi compatibility
+set nocompatible
+set encoding=utf-8
+
+" Load plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'itchyny/lightline.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-commentary'
+Plug 'junegunn/vim-easy-align'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'valloric/youcompleteme'
+Plug 'kien/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'majutsushi/tagbar'
+
+call plug#end()
+
+" vim-nerdtree
+autocmd FileType nerdtree nmap <buffer> <left> o
+autocmd FileType nerdtree nmap <buffer> <right> o
+map <Leader>t :NERDTreeToggle<CR>
+
+" vim-commentary
+map <Leader>c gcc
+
+" vim-easy-align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" vim-indent-guides
+let g:indent_guides_guide_size = 1
+let g:indent_guides_color_change_percent = 3
+let g:indent_guides_enable_on_vim_startup = 1
+
+" vim-ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+set wildignore+=*.so,*.swp,*.zip     " MacOSX/Linux
+" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+noremap  <Leader>p :CtrlP<CR>
+
+" vim-tagbar
+nmap <Leader><Leader>t :TagbarToggle<CR>
+
+" Smoother changes
+set ttyfast
+
+" Show matching braces when cursor is over them
+set showmatch
+
+" Auto read when file is changed from outside
+" set autoread
+
+" Shows what you are typing as command
+set showcmd
+
+" Filetype plugin
+filetype plugin on
+filetype indent on
+
+" Indentation
+set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab
+
+" Line numbers
+set relativenumber
+set number
+nnoremap <Leader>n :set relativenumber!<CR>
+
+" Keep 3 lines when scrolling
+set scrolloff=4
+
+" Highlight searches
+set hlsearch
+" Unhighlight searches
+map <Leader>h :noh<CR>
+noh
+
+" Do not cycle search + incremental search
+set nowrapscan incsearch
 
 " Set config for git commits
 autocmd Filetype gitcommit setlocal spell textwidth=72 colorcolumn=72
 
-" Remap ; to : to avoid pressing shift
-nnoremap ; :
+
+" Toggling spell check
+map <Leader>s :setlocal spell!<CR>
+
+" Disable Ex mode
+nnoremap Q <Nop>
+" Disable history of commands (still accessible with :<C-f>)
+map q: <Nop>
 
 
-" Map <C-s-p> into toggling spell check
-map <silent> <F6> <Esc>:call ToggleSpell()<CR>
-function! ToggleSpell()
-	if &spell
-		set nospell
-	else
-		set spell
-	endif
-endfunction
-
-
+" Ruler
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 set colorcolumn=80
-syntax on
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-if has("mouse")
-	set mouse=a
 
-	function SmoothScroll(up)
-		if a:up
-			let scrollaction="^Y"
-		else
-			let scrollaction="^E"
-		endif
-		exec "normal " . scrollaction
-		redraw
-		let counter=1
-		while counter<&scroll
-			let counter+=1
-			sleep 10m
-			redraw
-			exec "normal " . scrollaction
-		endwhile
-	endfunction
+" Mouse
+set mouse=a
 
-	map <ScrollWheelUp> <C-Y>
-	map <ScrollWheelDown> <C-E>
+" Cool tab completion
+set wildmenu " cool tab completion
 
-endif
+" Autoindenting
 set ai
-set incsearch
-filetype plugin on
+" Smart indent
+set si
+
+" Folding
+set foldenable
+
+""""""""""""""" Key bindings
+
+" Quickly open/reload vim
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
+
+" Indent with tab
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+
+command! W  w
+command! Q  q
+command! SW w !sudo tee %
+
+" Move around
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+" Maps Alt-[h,j,k,l] to resizing a window split
+map <silent> h <C-w><
+map <silent> j <C-W>-
+map <silent> k <C-W>+
+map <silent> l <C-w>>
+" Maps Alt-[s.v] to horizontal and vertical split respectively
+map <silent> <A-s> :split<CR>
+map <silent> <A-v> :vsplit<CR>
+" Maps Alt-[n,p] for moving next and previous window respectively
+map <silent> <A-n> <C-w><C-w>
+map <silent> <A-p> <C-w><S-w>
+
+" Clipboard
+" noremap  <Leader>p "+gp
+vnoremap <Leader>y "+y
+noremap  <Leader>y "+yy
+
+"""""""""""""""""" Theme
+syntax on
+set background=light
+colorscheme solarized
+" Always have status line
+set laststatus=2
+
+" Color scheme
+let g:lightline = {
+  \ 'colorscheme': 'solarized',
+  \ }
+

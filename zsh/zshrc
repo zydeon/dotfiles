@@ -125,7 +125,8 @@ bindkey \^D kill-word
 
 
 ### Add to PATH
-PATH=$PATH:/Library/TeX/texbin
+export PATH=$PATH:/Library/TeX/texbin
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
 
 ### Increase maximum size of history
