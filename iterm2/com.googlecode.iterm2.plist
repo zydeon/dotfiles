@@ -327,17 +327,17 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>196 68 445 77 0 0 1280 777 </string>
+	<string>556 314 445 77 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 110 924 485 0 0 1280 800 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 139 606 456 0 0 1280 800 </string>
+	<string>269 139 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>251 88 918 495 0 0 1280 777 </string>
+	<string>300 138 796 473 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>428 8 850 765 0 0 1280 777 </string>
+	<string>428 12 850 758 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>81 134 650 477 0 0 1280 777 </string>
+	<string>640 9 640 763 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>520 553 650 527 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -904,11 +904,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>MesloLGMDZ-RegularForPowerline 13</string>
+			<string>MesloLGLDZForPowerline-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGMDZ-RegularForPowerline 13</string>
+			<string>MesloLGSDZForPowerline-Regular 12</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1073,6 +1073,8 @@
 			<false/>
 			<key>Use Italic Font</key>
 			<true/>
+			<key>Use Non-ASCII Font</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>

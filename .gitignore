@@ -8,3 +8,9 @@ sublime-text/Package Control.ca-certs
 
 # Mac OSX
 .DS_Store
+
+# ctags
+^tags$
+
+*~
+*.swp

@@ -20,10 +20,13 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/vim-easy-align'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'valloric/youcompleteme'
+" Plug 'valloric/youcompleteme'
+Plug 'ervandew/supertab'
 Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -144,6 +147,9 @@ command! W  w
 command! Q  q
 command! SW w !sudo tee %
 
+" Create the `tags` file (may need to install ctags first)
+command! MakeTags !ctags -R .
+
 " Move around
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -151,8 +157,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " Maps Alt-[h,j,k,l] to resizing a window split
 map <silent> h <C-w><
-map <silent> j <C-W>-
-map <silent> k <C-W>+
+map <silent> j <C-W>+
+map <silent> k <C-W>-
 map <silent> l <C-w>>
 " Maps Alt-[s.v] to horizontal and vertical split respectively
 map <silent> <A-s> :split<CR>
@@ -174,7 +180,68 @@ colorscheme solarized
 set laststatus=2
 
 " Color scheme
+set noshowmode
 let g:lightline = {
   \ 'colorscheme': 'solarized',
+	\   'active': {
+	\     'left':  [ [ 'mode', 'paste' ],
+	\                [ 'fugitive' ],
+	\                [ 'readonly', 'filename' ] ],
+	\     'right': [ [ 'lineinfo' ],
+	\                [ 'percent' ] ],
+	\ },
+  \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+  \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
+  \ 'component_function': {
+  \   'fugitive': 'LLFugitive',
+  \   'readonly': 'LLReadonly',
+  \   'modified': 'LLModified',
+  \   'filename': 'LLFilename',
+  \   'mode': 'LLMode'
+  \ },
   \ }
+
+function! LLMode()
+  let fname = expand('%:t')
+  return fname == '__Tagbar__' ? 'Tagbar' :
+        \ fname == 'ControlP' ? 'CtrlP' :
+        \ lightline#mode() == 'NORMAL' ? 'N' :
+        \ lightline#mode() == 'INSERT' ? 'I' :
+        \ lightline#mode() == 'VISUAL' ? 'V' :
+        \ lightline#mode() == 'V-LINE' ? 'V' :
+        \ lightline#mode() == 'V-BLOCK' ? 'V' :
+        \ lightline#mode() == 'REPLACE' ? 'R' : lightline#mode()
+endfunction
+
+function! LLModified()
+  if &filetype == "help"
+    return ""
+  elseif &modified
+    return "+"
+  elseif &modifiable
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LLReadonly()
+  if &filetype == "help"
+    return ""
+  elseif &readonly
+    return "!"
+  else
+    return ""
+  endif
+endfunction
+
+function! LLFugitive()
+  return exists('*fugitive#head') ? fugitive#head() : ''
+endfunction
+
+function! LLFilename()
+  return ('' != LLReadonly() ? LLReadonly() . ' ' : '') .
+       \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+       \ ('' != LLModified() ? ' ' . LLModified() : '')
+endfunction
 
