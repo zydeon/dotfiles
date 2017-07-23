@@ -10,7 +10,7 @@ sublime-text/Package Control.ca-certs
 .DS_Store
 
 # ctags
-^tags$
+tags
 
 *~
 *.swp
