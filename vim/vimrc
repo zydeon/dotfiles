@@ -27,6 +27,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'blueyed/vim-diminactive'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
