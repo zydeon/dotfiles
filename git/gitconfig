@@ -20,5 +20,6 @@
 	ps = push
 	pl = pull
 	bs = !sh /Users/pmatias/git/scripts/branches.sh
+	amend = !git add -u && git commit --amend 
 [merge]
 	tool = opendiff
