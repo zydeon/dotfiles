@@ -20,7 +20,6 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/vim-easy-align'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'valloric/youcompleteme'
 Plug 'ervandew/supertab'
 Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
@@ -29,7 +28,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'blueyed/vim-diminactive'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'FelikZ/ctrlp-py-matcher'
 
 call plug#end()
 
@@ -104,7 +102,7 @@ set scrolloff=4
 " Highlight searches
 set hlsearch
 " Unhighlight searches
-map <Leader>h :noh<CR>
+map <Esc> :noh<CR>
 noh
 
 " Do not cycle search + incremental search
