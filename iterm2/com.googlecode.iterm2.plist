@@ -5,7 +5,7 @@
 	<key>AdjustWindowForFontSizeChange</key>
 	<true/>
 	<key>AllowClipboardAccess</key>
-	<false/>
+	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AnimateDimming</key>
@@ -333,9 +333,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>300 116 918 495 0 0 1280 777 </string>
+	<string>300 116 796 473 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 12 1274 758 0 0 1280 777 </string>
+	<string>3 12 1258 758 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>640 9 640 763 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
