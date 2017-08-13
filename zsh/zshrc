@@ -5,7 +5,7 @@ export ZSH=${HOME}/.dotfiles/zsh/oh-my-zsh
 export ZSH_CUSTOM=${HOME}/.dotfiles/zsh/custom
 
 # zsh tmux settings
-# ZSH_TMUX_AUTOSTART='true'
+ZSH_TMUX_AUTOSTART='true'
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -69,9 +69,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Setup colors
-# LS_COLORS='no=00;37:fi=00:di=00;33:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
-# export LS_COLORS
-# zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+eval `gdircolors $HOME/.dir_colors/dircolors.ansi-light`
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 
 # You may need to manually set your language environment
@@ -98,11 +97,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# if ls --color -d . >/dev/null 2>&1; then
-#   alias ls='gls --color=auto -F'
-# elif ls -G -d . >/dev/null 2>&1; then
-#   alias ls='ls -GF'
-# fi
+if ls --color -d . >/dev/null 2>&1; then
+  alias ls='ls --color=auto -F'
+elif ls -G -d . >/dev/null 2>&1; then
+  alias ls='gls --color=auto -F'   # use GNU coreutils ls
+fi
 alias ll='ls -lh'
 alias la='ls -lAFh'
 alias tree='tree -CF'
