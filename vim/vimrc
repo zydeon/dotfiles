@@ -108,10 +108,6 @@ noh
 " Do not cycle search + incremental search
 set nowrapscan incsearch
 
-" Set config for git commits
-autocmd Filetype gitcommit setlocal spell textwidth=72 colorcolumn=72
-
-
 " Toggling spell check
 map <Leader>s :setlocal spell!<CR>
 
