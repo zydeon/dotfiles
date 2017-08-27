@@ -10,6 +10,9 @@ ZSH_TMUX_AUTOSTART='true'
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+
+# Setup options for agnoster theme
+DEFAULT_USER=`whoami`
 PRIMARY_FG=white
 ZSH_THEME="agnoster"
 
@@ -95,7 +98,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-if ls --color -d . >/dev/null 2>&1; then
+if which ls | grep -v aliased && ls --color -d . >/dev/null 2>&1; then
   alias ls='ls --color=auto -F'
 elif ls -G -d . >/dev/null 2>&1; then
   alias ls='gls --color=auto -F'   # use GNU coreutils ls
