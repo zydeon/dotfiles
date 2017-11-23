@@ -17,16 +17,16 @@
 		"subpixel_antialias",
 		"no_round"
 	],
-	"font_size": 16.0,
+	"font_size": 15.0,
 	"ignored_packages":
 	[
-		"Vintage"
 	],
 	"line_padding_bottom": 2,
 	"line_padding_top": 2,
 	"rulers":
 	[
-		80
+		80,
+		100
 	],
 	"scroll_past_end": true,
 	"show_minimap": false,
