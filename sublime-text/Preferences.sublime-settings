@@ -3,6 +3,7 @@
 	[
 		"vertices"
 	],
+	"auto_complete_selector": "meta.tag - punctuation.definition.tag.begin, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc, text.tex",
 	"auto_find_in_selection": true,
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/Theme - Solarized Space/Solarized V (Light).tmTheme",

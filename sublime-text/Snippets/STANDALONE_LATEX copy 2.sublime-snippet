@@ -1,0 +1,12 @@
+<snippet>
+	<description>Empty Latex template</description>
+    <content><![CDATA[\documentclass{standalone}
+
+\begin{document}
+
+$1
+
+\end{document}]]></content>
+    <tabTrigger>standalone</tabTrigger>
+    <scope>text.tex.latex</scope>
+</snippet>

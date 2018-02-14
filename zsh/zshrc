@@ -139,3 +139,10 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 
+
+### Virtualenvwrapper things
+VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+

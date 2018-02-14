@@ -1,18 +1,20 @@
 <snippet>
 	<description>Empty Latex template</description>
-    <content><![CDATA[\documentclass[letterpaper]{article}
+    <content><![CDATA[\documentclass[11pt]{minimal}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
-\title{${0: Title}}
-\author{${1: Author}}
+\title{${2:Title}}
+\author{${1:Author}}
 \date{\today}
 
 \begin{document}
 
 \maketitle
 
+$0
+
 \end{document}]]></content>
-    <tabTrigger>main</tabTrigger>
-    <scope>source.tex</scope>
+    <tabTrigger>minimal</tabTrigger>
+    <scope>text.tex.latex</scope>
 </snippet>

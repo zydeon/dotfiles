@@ -13,3 +13,6 @@ Host chalmers
 Host ics
 	HostName openlab.ics.uci.edu
 	User pmatias
+Host google
+	HostName 35.197.5.120
+	User pedro

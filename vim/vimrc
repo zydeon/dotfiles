@@ -28,6 +28,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'blueyed/vim-diminactive'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'keith/swift.vim'
 
 call plug#end()
 
