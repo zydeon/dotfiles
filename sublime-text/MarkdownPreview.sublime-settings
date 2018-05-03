@@ -1,0 +1,10 @@
+{
+    "parser": "default",
+    "enabled_parsers": ["kramdown"],
+    "enable_mathjax": true,
+
+    "enable_autoreload": true,
+    "markdown_binary_map": {
+        "kramdown": ["/usr/local/bin/kramdown"]
+    },
+}
