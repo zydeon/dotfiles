@@ -10,5 +10,14 @@
   { "keys": ["super+i"], "command": "code_formatter" },
 
   // Close all files
-  { "keys": ["super+alt+w"], "command": "close_all" }
+  { "keys": ["super+alt+w"], "command": "close_all" },
+
+  // Avoid double escape, when using Vim mode
+  { "keys": ["escape"], "command": "exit_insert_mode",
+      "context": [
+          { "key": "setting.command_mode", "operand": false },
+          { "key": "setting.is_widget", "operand": false },
+          { "key": "setting.vintage_ctrl_keys" }
+      ]
+  }
 ]
