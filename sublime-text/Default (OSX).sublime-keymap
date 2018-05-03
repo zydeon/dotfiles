@@ -4,25 +4,11 @@
 
 	{ "keys": ["shift+super+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 	{ "keys": ["super+backspace"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
-  { "keys": ["super+ctrl+c"], "command": "copy_path"},
-
-  // latex commands
-  { "keys": ["super+i"], "command": "to_italic"},
-  { "keys": ["super+b"], "command": "to_bold"},
-  { "keys": ["super+u"], "command": "to_underline"},
-  { "keys": ["super+t"], "command": "to_text"},
-  { "keys": ["super+m"], "command": "to_math"},
-  { "keys": ["super+e"], "command": "to_emph"},
+  { "keys": ["super+alt+c"], "command": "copy_path"},
 
   // code formatter
   { "keys": ["super+i"], "command": "code_formatter" },
 
   // Close all files
   { "keys": ["super+alt+w"], "command": "close_all" }
-
-  // Rebind shortcuts for Fn keys (used for Spotify global shortcuts)
-  // { "keys": ["f7"], "command": "noop" },
-  // { "keys": ["f1"], "command": "build" }
-  // { "keys": ["f12"], "command": "unbound" }
-
 ]
