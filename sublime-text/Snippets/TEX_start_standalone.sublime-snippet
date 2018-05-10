@@ -1,5 +1,5 @@
 <snippet>
-	<description>Empty Latex template</description>
+	<description>Empty Latex template (standalone)</description>
     <content><![CDATA[\documentclass{standalone}
 
 \begin{document}
@@ -7,6 +7,6 @@
 $1
 
 \end{document}]]></content>
-    <tabTrigger>standalone</tabTrigger>
+    <tabTrigger>start</tabTrigger>
     <scope>text.tex.latex</scope>
 </snippet>

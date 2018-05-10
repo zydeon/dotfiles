@@ -1,5 +1,5 @@
 <snippet>
-	<description>Teste</description>
+	<description>Start empty file</description>
     <content><![CDATA[#include <iostream>
 #include <list>
 #include <algorithm>
@@ -9,6 +9,6 @@ int main(){
 	${0:/* code */}
 	
 }]]></content>
-    <tabTrigger>teste</tabTrigger>
+    <tabTrigger>start</tabTrigger>
     <scope>source.cpp, source.c++</scope>
 </snippet>

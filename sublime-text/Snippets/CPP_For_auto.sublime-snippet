@@ -1,5 +1,5 @@
 <snippet>
-	<description>For each loop (Matias)</description>
+	<description>For each loop</description>
     <content><![CDATA[for (auto &${1:e}: ${2:container}) {
 	${0:/* code */}
 }]]></content>

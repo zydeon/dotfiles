@@ -1,0 +1,10 @@
+<snippet>
+    <description>Start empty file</description>
+    <content><![CDATA[
+#!/usr/bin/env python3
+
+if __name__ == '__main__':
+  ${0: main()}]]></content>
+    <tabTrigger>start</tabTrigger>
+    <scope>source.python</scope>
+</snippet>
