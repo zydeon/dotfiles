@@ -9,6 +9,7 @@
 		"1337 Color Scheme",
 		"Alignment",
 		"All Autocomplete",
+		"AutoWrap",
 		"C++ Completions",
 		"Color Highlighter",
 		"DocBlockr",
@@ -29,6 +30,7 @@
 		"SwiftKitten",
 		"Theme - Solarized Space",
 		"TodoReview",
-		"TrailingSpaces"
+		"TrailingSpaces",
+		"Wrap Plus"
 	]
 }

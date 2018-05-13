@@ -1,5 +1,7 @@
 // These settings override both User and Default settings for the Markdown syntax
 {
     "color_scheme": "Packages/Theme - Solarized Space/Solarized V Markdown (Light).tmTheme",
-    "spell_check": true
+    "spell_check": true,
+    "auto_wrap": true,
+    "auto_wrap_width": 80
 }
