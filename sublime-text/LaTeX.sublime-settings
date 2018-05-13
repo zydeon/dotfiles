@@ -1,5 +1,6 @@
 // These settings override both User and Default settings for the LaTeX syntax
 {
     "word_wrap": "false",
-    "tab_size": 2
+    "tab_size": 2,
+    "spell_check": true
 }
