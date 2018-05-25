@@ -7,12 +7,12 @@ Host mosal-old
 Host mosal
     HostName mosal.dei.uc.pt
 	User admin
-Host chalmers
-	HostName remote1.student.chalmers.se
-	User mpedro
 Host ics
 	HostName openlab.ics.uci.edu
 	User pmatias
 Host google
 	HostName 35.197.5.120
 	User pedro
+Host theory
+  HostName redwood.ics.uci.edu
+  User git
