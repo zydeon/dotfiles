@@ -4,7 +4,9 @@
     "enable_autoreload": true,
     "markdown_binary_map": {
         // '--input GFM' lets us use strikethrough using ~~text~~
-        "kramdown": ["/usr/local/bin/kramdown", "--input", "GFM"]
+        // '--no-hard- wrap' forbids the parser from interpreting a single
+        // breakline as a paragraph
+        "kramdown": ["/usr/local/bin/kramdown", "--input", "GFM", "--no-hard-wrap"]
     },
     "js": ["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
            "res://MarkdownPreview/js/math_config.js"],
