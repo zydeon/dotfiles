@@ -3,7 +3,8 @@
     "enabled_parsers": ["kramdown"],
     "enable_autoreload": true,
     "markdown_binary_map": {
-        "kramdown": ["/usr/local/bin/kramdown"]
+        // '--input GFM' lets us use strikethrough using ~~text~~
+        "kramdown": ["/usr/local/bin/kramdown", "--input", "GFM"]
     },
     "js": ["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
            "res://MarkdownPreview/js/math_config.js"],
