@@ -1,3 +1,71 @@
 [submodule "zsh/oh-my-zsh"]
 	path = zsh/oh-my-zsh
 	url = git@github.com:zydeon/oh-my-zsh.git
+[submodule "vim/plugged/ctrlp.vim"]
+  path = vim/plugged/ctrlp.vim
+  url = https://github.com/kien/ctrlp.vim.git
+  active = true
+[submodule "vim/plugged/lightline.vim"]
+  path = vim/plugged/lightline.vim
+  url = https://github.com/itchyny/lightline.vim.git
+  active = true
+[submodule "vim/plugged/nerdtree"]
+  path = vim/plugged/nerdtree
+  url = https://github.com/scrooloose/nerdtree.git
+  active = true
+[submodule "vim/plugged/supertab"]
+  path = vim/plugged/supertab
+  url = https://github.com/ervandew/supertab.git
+  active = true
+[submodule "vim/plugged/swift.vim"]
+  path = vim/plugged/swift.vim
+  url = https://github.com/keith/swift.vim.git
+  active = true
+[submodule "vim/plugged/tagbar"]
+  path = vim/plugged/tagbar
+  url = https://github.com/majutsushi/tagbar.git
+  active = true
+[submodule "vim/plugged/vim-colors-solarized"]
+  path = vim/plugged/vim-colors-solarized
+  url = https://github.com/altercation/vim-colors-solarized.git
+  active = true
+[submodule "vim/plugged/vim-commentary"]
+  path = vim/plugged/vim-commentary
+  url = https://github.com/tpope/vim-commentary.git
+  active = true
+[submodule "vim/plugged/vim-diminactive"]
+  path = vim/plugged/vim-diminactive
+  url = https://github.com/blueyed/vim-diminactive.git
+  active = true
+[submodule "vim/plugged/vim-easy-align"]
+  path = vim/plugged/vim-easy-align
+  url = https://github.com/junegunn/vim-easy-align.git
+  active = true
+[submodule "vim/plugged/vim-easymotion"]
+  path = vim/plugged/vim-easymotion
+  url = https://github.com/easymotion/vim-easymotion.git
+  active = true
+[submodule "vim/plugged/vim-fugitive"]
+  path = vim/plugged/vim-fugitive
+  url = https://github.com/tpope/vim-fugitive.git
+  active = true
+[submodule "vim/plugged/vim-gitgutter"]
+  path = vim/plugged/vim-gitgutter
+  url = https://github.com/airblade/vim-gitgutter.git
+  active = true
+[submodule "vim/plugged/vim-indent-guides"]
+  path = vim/plugged/vim-indent-guides
+  url = https://github.com/nathanaelkane/vim-indent-guides.git
+  active = true
+[submodule "vim/plugged/vim-multiple-cursors"]
+  path = vim/plugged/vim-multiple-cursors
+  url = https://github.com/terryma/vim-multiple-cursors.git
+  active = true
+[submodule "vim/plugged/vim-surround"]
+  path = vim/plugged/vim-surround
+  url = https://github.com/tpope/vim-surround.git
+  active = true
+[submodule "vim/plugged/vim-tmux-navigator"]
+  path = vim/plugged/vim-tmux-navigator
+  url = https://github.com/christoomey/vim-tmux-navigator.git
+  active = true
