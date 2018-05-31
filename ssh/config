@@ -11,7 +11,7 @@ Host ics
 	HostName openlab.ics.uci.edu
 	User pmatias
 Host google
-	HostName 35.197.5.120
+	HostName 35.233.140.57
 	User pedro
 Host theory
   HostName redwood.ics.uci.edu
