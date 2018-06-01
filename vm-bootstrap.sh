@@ -7,6 +7,7 @@ sudo apt-get update
 sudo apt-get install git
 sudo apt-get install zsh
 sudo apt-get install tmux
+sudo apt-get install htop
 sudo apt-get install clang-6.0
 sudo apt-get install cmake
 sudo apt-get install cmake-curses-gui  # for ccmake
