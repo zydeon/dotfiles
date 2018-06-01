@@ -1,13 +1,16 @@
+# Get more recent package versions:
+# Add the following to /etc/apt/sources.list
+# deb http://deb.debian.org/debian/ buster main
+# deb-src http://deb.debian.org/debian/ buster main
+sudo apt-get update
+
 sudo apt-get install git
+sudo apt-get install zsh
 sudo apt-get install tmux
 sudo apt-get install clang-6.0
 sudo apt-get install cmake
 sudo apt-get install cmake-curses-gui  # for ccmake
 
-# Add the following to /etc/apt/sources.list
-# deb http://deb.debian.org/debian/ buster main
-# deb-src http://deb.debian.org/debian/ buster main
-sudo apt-get update
 
 
 ssh-keygen -t rsa -b 4096 -C "pedro@pmatias.com"
@@ -19,6 +22,7 @@ cd
 git clone --recursive git@github.com:zydeon/dotfiles .dotfiles
 ln -s $HOME/.dotfiles/dir_colors $HOME/.dir_colors
 ln -s $HOME/.dotfiles/gdb/gdbinit $HOME/.gdbinit
+ln -s $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
 ln -s $HOME/.dotfiles/.hushlogin $HOME/.hushlogin
 ln -s $HOME/.dotfiles/lldb/lldbinit $HOME/.lldbinit
 ln -s $HOME/.dotfiles/zsh/oh-my-zsh $HOME/.oh-my-zsh
