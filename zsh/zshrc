@@ -114,6 +114,19 @@ alias grep='egrep'
 alias ql='qlmanage -p "$@" > /dev/null 2>&1'
 alias ip='ifconfig | colout "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+"'
 
+### Functions
+function sms() {
+  # Using tmobile provider. For a more elaborate list, check lib/carries.js in
+  # https://github.com/typpo/textbelt
+  provider=tmomail.net
+
+  if [[ $# -lt 1 ]]; then
+    echo "Usage: $0 <phone number>"
+  fi
+  # TODO: check that it's a valid phone number
+  mail -s "txt" $1@$provider
+}
+
 
 # Delete to beginning of line
 bindkey \^U backward-kill-line
