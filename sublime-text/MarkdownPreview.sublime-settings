@@ -9,9 +9,9 @@
         "kramdown": ["/usr/local/bin/kramdown", "--input", "GFM", "--no-hard-wrap"],
 
         // pandoc with citeproc allows for citations in Markdown using syntax [@citref]
-        // (see https://gist.github.com/maxogden/97190db73ac19fc6c1d9beee1a6e4fc8)
-        "pandoc": ["/usr/local/bin/pandoc", "--filter", "pandoc-citeproc", 
-                                            "--bibliography=/tmp/test-md/paper.bib", "-s"]
+        // Added "bibliography: /absolute/path/to/ref.bib" to pandoc YAML
+        // (see https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md)
+        "pandoc": ["/usr/local/bin/pandoc", "--filter", "pandoc-citeproc",  "-s"]
     },
     "js": ["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
            "res://MarkdownPreview/js/math_config.js"],
