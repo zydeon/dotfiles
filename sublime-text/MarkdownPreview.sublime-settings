@@ -8,10 +8,13 @@
         // breakline as a paragraph
         "kramdown": ["/usr/local/bin/kramdown", "--input", "GFM", "--no-hard-wrap"],
 
-        // pandoc with citeproc allows for citations in Markdown using syntax [@citref]
-        // Added "bibliography: /absolute/path/to/ref.bib" to pandoc YAML
+        // '--filter pandoc-citeproc' allows for citations in Markdown using
+        // syntax [@citref]. Requires adding
+        // 'bibliography: /absolute/path/to/ref.bib' to pandoc YAML
         // (see https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md)
-        "pandoc": ["/usr/local/bin/pandoc", "--filter", "pandoc-citeproc",  "-s"]
+        // '--toc' allows us to display a table of contents at the beginning of
+        // the document. Set 'toc: false' in YAML, if not needed.
+        "pandoc": ["/usr/local/bin/pandoc", "--filter", "pandoc-citeproc", "--toc", "-s"]
     },
     "js": ["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
            "res://MarkdownPreview/js/math_config.js"],
