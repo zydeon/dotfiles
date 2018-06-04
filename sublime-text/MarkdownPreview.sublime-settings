@@ -1,12 +1,17 @@
 {
     "parser": "default",
-    "enabled_parsers": ["kramdown"],
+    "enabled_parsers": ["kramdown", "pandoc"],
     "enable_autoreload": true,
     "markdown_binary_map": {
         // '--input GFM' lets us use strikethrough using ~~text~~
         // '--no-hard- wrap' forbids the parser from interpreting a single
         // breakline as a paragraph
-        "kramdown": ["/usr/local/bin/kramdown", "--input", "GFM", "--no-hard-wrap"]
+        "kramdown": ["/usr/local/bin/kramdown", "--input", "GFM", "--no-hard-wrap"],
+
+        // pandoc with citeproc allows for citations in Markdown using syntax [@citref]
+        // (see https://gist.github.com/maxogden/97190db73ac19fc6c1d9beee1a6e4fc8)
+        "pandoc": ["/usr/local/bin/pandoc", "--filter", "pandoc-citeproc", 
+                                            "--bibliography=/tmp/test-md/paper.bib", "-s"]
     },
     "js": ["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
            "res://MarkdownPreview/js/math_config.js"],
