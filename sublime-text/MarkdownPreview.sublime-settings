@@ -11,6 +11,7 @@
         // '--filter pandoc-citeproc' allows for citations in Markdown using
         // syntax [@citref]. Requires adding
         // 'bibliography: /absolute/path/to/ref.bib' to pandoc YAML
+        // Add 'link-citations: true' for href links.
         // (see https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md)
         // '--toc' allows us to display a table of contents at the beginning of
         // the document. Set 'toc: false' in YAML, if not needed.
