@@ -18,4 +18,5 @@
     },
     "js": ["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
            "res://MarkdownPreview/js/math_config.js"],
+    "css": ["/Users/zydeon/.dotfiles/pandoc.css"],
 }
