@@ -256,12 +256,12 @@ table td {
 
 @media only screen and (min-width: 480px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 768px) {
   body {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 @media print {
