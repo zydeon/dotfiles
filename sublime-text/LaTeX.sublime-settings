@@ -2,5 +2,7 @@
 {
     "word_wrap": "false",
     "tab_size": 2,
-    "spell_check": true
+    "spell_check": true,
+    "auto_wrap": true,
+    "auto_wrap_width": 80
 }
