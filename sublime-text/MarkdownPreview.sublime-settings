@@ -15,9 +15,13 @@
         // (see https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md)
         // '--toc' allows us to display a table of contents at the beginning of
         // the document. Set 'toc: false' in YAML, if not needed.
-        "pandoc": ["/usr/local/bin/pandoc", "--filter", "pandoc-citeproc", "--toc", "-s"]
+        "pandoc": ["/usr/local/bin/pandoc", "--filter", "pandoc-citeproc",
+                                            "--toc", "-s", "--mathjax"]
     },
-    "js": ["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
-           "res://MarkdownPreview/js/math_config.js"],
+
+    // Uncomment the following when using kramdoc.
+    // TODO: remove --mathjax param in pandoc (above) and only use this JS
+    // "js": ["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
+    //        "res://MarkdownPreview/js/math_config.js"],
     "css": ["/Users/zydeon/.dotfiles/pandoc.css"],
 }
