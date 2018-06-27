@@ -65,13 +65,17 @@ plugins=(git tmux zsh-autosuggestions zsh-syntax-highlighting)
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:~/bin"
-
 ## Load custom plugins
 source $ZSH/oh-my-zsh.sh
 
 
 # Setup colors
-eval `gdircolors $HOME/.dir_colors/dircolors.ansi-light`
+DIRCOLOR_BIN=gdircolors
+if [[ `uname` = "Linux" ]]; then
+  DIRCOLOR_BIN=dircolors
+fi
+
+eval `$DIRCOLOR_BIN $HOME/.dir_colors/dircolors.ansi-light`
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 
@@ -149,5 +153,7 @@ SAVEHIST=$HISTSIZE
 VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+if [ -f /usr/loca/bin/virtualenvwrapper.sh ]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
 
