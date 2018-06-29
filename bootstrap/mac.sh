@@ -59,3 +59,9 @@ brew cask install qlcolorcode \
 pip3 install bpython --user
 pip3 install gdbgui --user --upgrade
 
+
+# Sublime-Text
+cd '$HOME/Library/Application Support/Sublime Text 3/Packages'
+ln -s $HOME/.dotfiles/sublime-text
+mv sublime-text User
+cd
