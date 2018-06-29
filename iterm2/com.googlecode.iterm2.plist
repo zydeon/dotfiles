@@ -333,15 +333,15 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>300 116 796 473 0 0 1280 777 </string>
+	<string>136 203 796 473 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 12 1258 758 0 0 1280 777 </string>
+	<string>323 11 938 758 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>640 9 640 763 0 0 1280 777 </string>
+	<string>429 304 665 452 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>520 553 650 527 0 0 1280 777 </string>
+	<string>615 318 665 452 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>630 242 650 527 0 0 1920 1057 </string>
+	<string>643 12 633 758 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>215 250 650 527 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_36CF9CC0-3A17-46FE-A5C5-7D41F91A4F02</key>
