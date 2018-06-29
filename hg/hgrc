@@ -1,3 +1,17 @@
 [ui]
 username = Pedro Matias <pedro@pmatias.com>
 editor = vim
+
+[extensions]
+color =
+
+[color]
+custom.rev = yellow
+custom.author = bold
+
+[alias]
+s = status
+ci = commit
+l = log
+b = branch
+ls = log --template "{label('custom.rev',node|short)} | {date|isodatesec} | {author|user}: {desc|strip|firstline}\n"
