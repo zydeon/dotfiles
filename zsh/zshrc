@@ -112,7 +112,11 @@ fi
 alias ll='ls -lh'
 alias la='ls -lAFh'
 alias tree='tree -CF'
-alias sb='reattach-to-user-namespace subl' # enable subl inside tmux
+if [[ `uname` = Darwin ]]; then
+  alias sb='reattach-to-user-namespace subl' # enable subl inside tmux
+else
+  alias sb=subl
+fi
 alias egrep='egrep --color=always'  # show colors when piping to less
 alias grep='egrep'
 alias ql='qlmanage -p "$@" > /dev/null 2>&1'
@@ -157,3 +161,10 @@ if [ -f /usr/loca/bin/virtualenvwrapper.sh ]; then
   source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+## Switch Capslock with Esc (TODO: check if works in Mac)
+if [[ `uname` = Linux ]]; then
+  xmodmap -e "remove Lock = Caps_Lock"
+  xmodmap -e "remove Lock = Escape"
+  xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
+  xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+fi
