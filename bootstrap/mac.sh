@@ -31,7 +31,8 @@ brew install zsh \
              llvm  `# keep most updated clang` \
              gdb \
              `#conan # C++ package manager` \
-             tag
+             tag \
+             pandoc pandoc-citeproc
 
 
 # To maintain both clang versions
