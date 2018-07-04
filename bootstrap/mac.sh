@@ -13,7 +13,8 @@ brew cask install iterm2 \
                   vlc \
                   karabiner \
                   seil \
-                  mactex
+                  mactex \
+                  nomachine `# remote screen`
 
 # 3 - Normal brews
 brew install zsh \
