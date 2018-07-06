@@ -19,6 +19,7 @@ brew cask install iterm2 \
 # 3 - Normal brews
 brew install zsh \
              tmux \
+             reattach-to-user-namespace `# enable subl in tmux` \
              git \
              vim \
              cmake \
