@@ -1,0 +1,6 @@
+{
+    "debug": true,
+    "command": "/usr/local/bin/ctags",
+    "tag_file" : "tags",
+    "select_searched_symbol": false,
+}
