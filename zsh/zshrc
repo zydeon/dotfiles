@@ -51,7 +51,7 @@ ZSH_THEME="agnoster"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -167,4 +167,12 @@ if [[ `uname` = Linux ]]; then
   xmodmap -e "remove Lock = Escape"
   xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
   xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+  xmodmap -e "keycode 108 = Return"
 fi
+
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
+export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
+export PATH=$HOME/.local/bin:$PATH
+
+alias xclip='xclip -sel clip'
