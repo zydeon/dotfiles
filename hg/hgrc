@@ -6,12 +6,18 @@ editor = vim
 color =
 
 [color]
-custom.rev = yellow
-custom.author = bold
+custom.rev = bold
+custom.date = yellow
+custom.author = blue
+
+[pager]
+/* pager = less -F */
 
 [alias]
 s = status
+bs = bookmark
 ci = commit
-l = log
-b = branch
-ls = log --template "{label('custom.rev',node|short)} | {date|isodatesec} | {author|user}: {desc|strip|firstline}\n"
+l = log --template "{label('custom.rev',node|short)} {label('custom.date',date|age)}\t{desc|strip|firstline} [{label('custom.author',author)}]\n"
+ls = log -r "reverse(master::tip)" --template "{label('custom.rev',node|short)} {label('custom.date',date|age)}\t{desc|strip|firstline} [{label('custom.author',author)}]\n"
+lss = log --template "{label('custom.rev',node|short)} {label('custom.date',date|age)}\t{desc} [{label('custom.author',author)}]\n"
+tr = l -G -T '{sl}' --all -l100
