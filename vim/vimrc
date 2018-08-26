@@ -117,6 +117,8 @@ nnoremap Q <Nop>
 " Disable history of commands (still accessible with :<C-f>)
 map q: <Nop>
 
+" Allow saving of files as sudo
+cmap w!! w !sudo tee > /dev/null %
 
 " Ruler
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
@@ -160,17 +162,23 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" Maps Alt-[h,j,k,l] to resizing a window split
-map <silent> h <C-w><
-map <silent> j <C-W>+
-map <silent> k <C-W>-
-map <silent> l <C-w>>
+" Maps Alt-[h,j,k,l] to resizing a window split (for escape character press
+" Ctrl-V+Esc
+noremap <silent> h <C-w><
+noremap <silent> j <C-W>+
+noremap <silent> k <C-W>-
+noremap <silent> l <C-w>>
 " Maps Alt-[s.v] to horizontal and vertical split respectively
-map <silent> <A-s> :split<CR>
-map <silent> <A-v> :vsplit<CR>
+noremap <silent> s :split<CR>
+noremap <silent> v :vsplit<CR>
 " Maps Alt-[n,p] for moving next and previous window respectively
-map <silent> <A-n> <C-w><C-w>
-map <silent> <A-p> <C-w><S-w>
+noremap <silent> <A-n> <C-w><C-w>
+noremap <silent> <A-p> <C-w><S-w>
+
+" Set mapping timeout delays
+set timeoutlen=1000
+" Set key code delays
+set ttimeoutlen=10
 
 " Clipboard
 " noremap  <Leader>p "+gp
