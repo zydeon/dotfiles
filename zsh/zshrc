@@ -14,7 +14,7 @@ ZSH_TMUX_AUTOSTART='true'
 # Setup options for agnoster theme
 VIRTUAL_ENV_DISABLE_PROMPT=1
 DEFAULT_USER=`whoami`
-PRIMARY_FG=white
+SOLARIZED_THEME="light"
 ZSH_THEME="agnoster"
 
 
