@@ -62,12 +62,12 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux zsh-autosuggestions zsh-syntax-highlighting)
 
-# User configuration
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:~/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin"
 ## Load custom plugins
 source $ZSH/oh-my-zsh.sh
 
+# Setup plugins configs
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=248'
 
 # Setup colors
 DIRCOLOR_BIN=gdircolors
