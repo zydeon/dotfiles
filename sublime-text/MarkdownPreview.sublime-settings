@@ -23,5 +23,7 @@
     // TODO: remove --mathjax param in pandoc (above) and only use this JS
     // "js": ["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
     //        "res://MarkdownPreview/js/math_config.js"],
-    "css": ["$HOME/.dotfiles/pandoc.css"],
+    "css": {
+        "pandoc": ["~/.dotfiles/pandoc.css"]
+    },
 }
