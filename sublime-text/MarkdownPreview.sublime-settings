@@ -1,6 +1,6 @@
 {
     "parser": "default",
-    "enabled_parsers": ["kramdown", "pandoc"],
+    "enabled_parsers": ["pandoc", "kramdown"],
     "enable_autoreload": true,
     "markdown_binary_map": {
         // '--input GFM' lets us use strikethrough using ~~text~~
@@ -16,6 +16,7 @@
         // '--toc' allows us to display a table of contents at the beginning of
         // the document. Set 'toc: false' in YAML, if not needed.
         "pandoc": ["/usr/local/bin/pandoc", "--filter", "pandoc-citeproc",
+                                            "--lua-filter", "tikz.lua",
                                             "--toc", "-s", "--mathjax"]
     },
 
@@ -24,6 +25,6 @@
     // "js": ["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js",
     //        "res://MarkdownPreview/js/math_config.js"],
     "css": {
-        "pandoc": ["~/.dotfiles/pandoc.css"]
+        "pandoc": ["~/.dotfiles/pandoc/pandoc.css"]
     },
 }
