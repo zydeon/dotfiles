@@ -4,5 +4,7 @@
     "tab_size": 2,
     "spell_check": true,
     "auto_wrap": true,
-    "auto_wrap_width": 80
+    "auto_wrap_width": 100,
+    "wrap_width": 100,
+    "auto_wrap_break_patterns" :  ["\\[", "\\(", "\\{", " ", "\\n", "$"]
 }
