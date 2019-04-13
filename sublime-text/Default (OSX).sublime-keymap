@@ -33,4 +33,11 @@
        // { "key": "selector", "operator": "not_equal", "operand": "markup.raw", "match_all": true }
    ]
   },
+
+  // Bookmarks
+  { "keys": ["super+m", "super+,"], "command": "next_bookmark" },
+  { "keys": ["super+m", "super+n"], "command": "prev_bookmark" },
+  { "keys": ["super+m", "super+c"], "command": "toggle_bookmark" },
+  { "keys": ["super+shift+f2"], "command": "clear_bookmarks" },
+  { "keys": ["alt+f2"], "command": "select_all_bookmarks" },
 ]

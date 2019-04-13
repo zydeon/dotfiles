@@ -1,3 +1,5 @@
+# set startup-with-shell off
+
 define xxd
     dump binary memory /tmp/dump.bin $arg0 $arg0+$arg1
     shell xxd dump.bin
