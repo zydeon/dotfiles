@@ -169,8 +169,8 @@ override) the bindings in the main default.xml.
   <bind action="PaintBucketPrefs" />
 
   <bind key="F8" action="ToolText" display="true" />
-  <bind key="t" action="ToolText" />
-  <bind key="T" action="ToolText" />
+  <bind key="t" action="org.ekips.filter.textext" display="true" />
+  <bind key="T" action="org.ekips.filter.textext" />
 
   <bind action="TextPrefs" />
 
