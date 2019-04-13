@@ -68,3 +68,7 @@ cd '$HOME/Library/Application Support/Sublime Text 3/Packages'
 ln -s $HOME/.dotfiles/sublime-text
 mv sublime-text User
 cd
+
+# Add Inkscape link
+ln -s $HOME/.dotfiles/inkscape/keys $HOME/.config/inkscape
+ln -s $HOME/.dotfiles/inkscape/preferences.xml $HOME/.config/inkscape
