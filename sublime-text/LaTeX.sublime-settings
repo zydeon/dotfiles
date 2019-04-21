@@ -1,9 +1,9 @@
 // These settings override both User and Default settings for the LaTeX syntax
 {
-    "word_wrap": "false",
+    "word_wrap": "true",
     "tab_size": 2,
     "spell_check": true,
-    "auto_wrap": true,
+    // "auto_wrap": true,
     "auto_wrap_width": 100,
     "wrap_width": 100,
     "auto_wrap_break_patterns" :  ["\\[", "\\(", "\\{", " ", "\\n", "$"]

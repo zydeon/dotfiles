@@ -13,6 +13,6 @@ Host ics
 Host google
 	HostName 35.233.140.57
 	User pedro
-Host theory
+Host redwood
   HostName redwood.ics.uci.edu
   User git
