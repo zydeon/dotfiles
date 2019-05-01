@@ -337,8 +337,8 @@
        style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"
        selcue="1">
       <group
-         display_unit="0"
-         id="lineheight" />
+         id="lineheight"
+         display_unit="0" />
     </eventcontext>
     <eventcontext
        id="nodes"
@@ -425,12 +425,12 @@
        offset="0"
        offsetunits="pt" />
     <group
-       unit="mm"
-       offset="5"
-       scale="100"
-       precision="2"
+       id="measure"
        fontsize="10"
-       id="measure" />
+       precision="2"
+       scale="100"
+       offset="5"
+       unit="mm" />
   </group>
   <group
      id="palette">
@@ -577,8 +577,8 @@
        page="0"
        x="0"
        y="0"
-       w="358"
-       h="444"
+       w="369"
+       h="492"
        visible="1"
        state="2"
        placement="5" />
@@ -597,8 +597,8 @@
        rotateCounterClockwise="1"
        x="0"
        y="0"
-       w="358"
-       h="444"
+       w="369"
+       h="492"
        visible="1"
        state="2"
        placement="5" />
@@ -611,8 +611,8 @@
        panel_border="0"
        x="0"
        y="0"
-       w="358"
-       h="444"
+       w="369"
+       h="492"
        align-to="0"
        visible="1"
        state="2"
@@ -626,11 +626,11 @@
        panel_border="0"
        x="0"
        y="0"
-       w="358"
-       h="444"
+       w="1"
+       h="1"
        visible="1"
-       state="2"
-       placement="5" />
+       state="3"
+       placement="1" />
     <group
        id="find" />
     <group
@@ -677,11 +677,11 @@
        panel_border="0"
        x="0"
        y="0"
-       w="358"
-       h="444"
+       w="1"
+       h="1"
        visible="1"
-       state="2"
-       placement="5" />
+       state="3"
+       placement="1" />
     <group
        id="export"
        default=""
@@ -694,14 +694,14 @@
        panel_border="0"
        x="0"
        y="0"
-       w="358"
-       h="444"
+       w="1"
+       h="1"
        visible="1"
-       state="2"
-       placement="5">
+       state="3"
+       placement="1">
       <group
          id="exportarea"
-         value="drawing" />
+         value="custom" />
       <group
          id="defaultxdpi" />
     </group>
@@ -717,7 +717,7 @@
        default="org.inkscape.output.pdf.cairorenderer"
        append_extension="1"
        enable_preview="1"
-       path="/Users/zydeon/University/PhD/Notes/tracking/LaTeX/images" />
+       path="/Users/zydeon/University/PhD/Notes/tracking/tracking/images" />
     <group
        id="open"
        enable_preview="1"
@@ -761,8 +761,8 @@
        panel_border="0"
        x="0"
        y="0"
-       w="358"
-       h="444"
+       w="369"
+       h="492"
        visible="1"
        state="2"
        placement="5" />
@@ -785,8 +785,8 @@
        on-blur="0.50"
        animate-time="100" />
     <group
-       asbitmap="0"
-       id="printing" />
+       id="printing"
+       asbitmap="0" />
   </group>
   <group
      id="printing">
@@ -1082,15 +1082,15 @@
      org.inkscape.output.pdf.cairorenderer.area="drawing" />
   <group
      id="desktop"
-     style="line-height:1.25;fill:#0000ff;stroke-width:2.66666675;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:0.24285716;stroke:#969696;stroke-opacity:1;stroke-dashoffset:0">
+     style="line-height:1.25;fill:#87cdde;stroke-width:1.33417323;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1;stroke:#797979;stroke-opacity:1;stroke-dashoffset:0">
     <group
        width="1920"
-       height="1155"
-       x="0"
-       y="0"
+       height="1035"
+       x="1627"
+       y="286"
        fullscreen="0"
        id="geometry"
-       maximized="0" />
+       maximized="1" />
     <group
        id="XYfront" />
     <group
