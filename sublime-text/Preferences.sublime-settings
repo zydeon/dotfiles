@@ -3,7 +3,13 @@
 	[
 		"vertices",
 		"plugin",
-		"labelings"
+		"labelings",
+		"Courcelle",
+		"Courcelle's",
+		"treewidth",
+		"arity",
+		"approximability",
+		"surveilling"
 	],
 	"auto_complete_selector": "meta.tag - punctuation.definition.tag.begin, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc, text.tex",
 	"auto_find_in_selection": true,
@@ -11,16 +17,14 @@
 	"color_scheme": "Packages/Theme - Solarized Space/Solarized V (Light).tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"enable_tab_scrolling": false,
-	"file_exclude_patterns":
-	[
-	],
+	"file_exclude_patterns": ["*.pyc", "*.dll", "*.obj","*.o", ".DS_Store", "*.class", "*.db"],
 	"font_face": "Ubuntu Mono",
 	"font_options":
 	[
 		"subpixel_antialias",
 		"no_round"
 	],
-	"font_size": 15.0,
+	"font_size": 16.0,
 	"ignored_packages":
 	[
 	],
