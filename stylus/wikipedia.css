@@ -1,0 +1,10 @@
+/* domain: en.wikipedia.org
+ *         pt.wikipedia.org
+ */
+
+body {
+  width: 1200px;
+  position: relative;
+  font-size: 110%;
+  margin: 0 auto;
+}
