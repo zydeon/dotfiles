@@ -72,3 +72,6 @@ cd
 # Add Inkscape link
 ln -s $HOME/.dotfiles/inkscape/keys $HOME/.config/inkscape
 ln -s $HOME/.dotfiles/inkscape/preferences.xml $HOME/.config/inkscape
+
+# Add Custom Monitor Color Profiles
+ln -s ~/.dotfiles/Library/ColorSync/Profiles ~/Library/ColorSync
