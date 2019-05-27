@@ -17,7 +17,16 @@
 	"color_scheme": "Packages/Theme - Solarized Space/Solarized V (Light).tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"enable_tab_scrolling": false,
-	"file_exclude_patterns": ["*.pyc", "*.dll", "*.obj","*.o", ".DS_Store", "*.class", "*.db"],
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		".DS_Store",
+		"*.class",
+		"*.db"
+	],
 	"font_face": "Ubuntu Mono",
 	"font_options":
 	[
