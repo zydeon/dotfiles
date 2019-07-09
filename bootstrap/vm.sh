@@ -33,6 +33,12 @@ ln -s $HOME/.dotfiles/vim $HOME/.vim
 ln -s $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
 ln -s $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
 
+### Oh-my-zsh plugins
+for p in zsh-autosuggestions zsh-syntax-highlighting; do
+  git clone https://github.com/zsh-users/$p \
+    ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/$p
+done
+
 
 
 ### Setup git server
