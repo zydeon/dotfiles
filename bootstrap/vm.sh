@@ -29,7 +29,7 @@ ln -s $HOME/.dotfiles/.hushlogin $HOME/.hushlogin
 ln -s $HOME/.dotfiles/lldb/lldbinit $HOME/.lldbinit
 ln -s $HOME/.dotfiles/zsh/oh-my-zsh $HOME/.oh-my-zsh
 ln -s $HOME/.dotfiles/tmux/tmux.conf $HOME/.tmux.conf
-ln -s $HOME/.dotfiles/vim $HOME/.vim
+rm -rf $HOME/.vim && ln -s $HOME/.dotfiles/vim $HOME/.vim
 ln -s $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
 ln -s $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
 
