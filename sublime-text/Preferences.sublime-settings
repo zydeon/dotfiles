@@ -51,5 +51,6 @@
 	"tab_size": 2,
 	"theme": "Solarized Space Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"vintage_start_in_command_mode": true
+	"vintage_start_in_command_mode": true,
+	"ensure_newline_at_eof_on_save": true
 }
