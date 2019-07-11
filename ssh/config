@@ -16,3 +16,5 @@ Host google
 Host redwood
   HostName redwood.ics.uci.edu
   User git
+Host *
+  UseKeychain yes
