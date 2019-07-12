@@ -14,7 +14,7 @@ custom.author = blue
 /* pager = less -F */
 
 [alias]
-s = status
+s = status --pager never
 bs = bookmark
 ci = commit
 l = log --template "{label('custom.rev',node|short)} {label('custom.date',date|age)}\t{desc|strip|firstline} [{label('custom.author',author)}]\n"
