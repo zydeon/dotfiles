@@ -26,6 +26,8 @@
 	pl = pull
 	bs = !sh /Users/pmatias/git/scripts/branches.sh
 	amend = !git add -u && git commit --amend 
+	supdate = submodule update --remote --rebase
+	spush = push --recurse-submodules=on-demand
 [diff]
 	submodule = log
 [status]
