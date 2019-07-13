@@ -69,3 +69,6 @@
   path = vim/plugged/vim-tmux-navigator
   url = https://github.com/christoomey/vim-tmux-navigator.git
   active = true
+[submodule "tmux/plugins/tpm"]
+  path = tmux/plugins/tpm
+  url = git@github.com:tmux-plugins/tpm.git
