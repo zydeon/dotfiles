@@ -26,3 +26,9 @@
 	pl = pull
 	bs = !sh /Users/pmatias/git/scripts/branches.sh
 	amend = !git add -u && git commit --amend 
+[diff]
+	submodule = log
+[status]
+	submodulesummary = 1
+[push]
+	recurseSubmodules = check
