@@ -19,3 +19,6 @@ tags
 
 # vim
 vim/.netrwhist
+
+# Tmux Resurrect
+tmux/resurrect
