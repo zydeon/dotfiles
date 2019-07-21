@@ -4,6 +4,8 @@ editor = vim
 
 [extensions]
 color =
+rebase =
+strip =
 
 [color]
 custom.rev = bold
