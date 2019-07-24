@@ -24,3 +24,4 @@ ls = log -r "reverse(master::tip)" --template "{label('custom.rev',node|short)} 
 lss = log --template "{label('custom.rev',node|short)} {label('custom.date',date|age)}\t{desc} [{label('custom.author',author)}]\n"
 tr = l -G -T '{sl}' --all -l100
 show = !$HG log -p -r $1 .
+shows = !$HG log -p -r $1 . --stat
