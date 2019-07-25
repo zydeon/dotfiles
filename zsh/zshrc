@@ -186,7 +186,8 @@ alias alert="osascript -e 'tell application (path to frontmost application as te
 # Automatically update command
 function refresh() {
 CMD="$@"
-CACHE_FILE=/tmp/`echo "$CMD" | sed 's/ /_/g'`
+TIME=`date +%s`
+CACHE_FILE=/tmp/`echo "$CMD_$TIME" | sed 's/ /_/g'`
 clear
 eval "$CMD"
 while true; do
