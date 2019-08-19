@@ -2,7 +2,7 @@
 {
     "color_scheme": "Packages/Theme - Solarized Space/Solarized V Markdown (Light).tmTheme",
     "spell_check": true,
-    "auto_wrap": true,
-    "auto_wrap_width": 100,
+    // "auto_wrap": true,
+    // "auto_wrap_width": 100,
     "wrap_width": 100
 }
