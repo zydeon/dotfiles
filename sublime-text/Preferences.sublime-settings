@@ -17,6 +17,7 @@
 	"color_scheme": "Packages/Theme - Solarized Space/Solarized V (Light).tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"enable_tab_scrolling": false,
+	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -51,6 +52,5 @@
 	"tab_size": 2,
 	"theme": "Solarized Space Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"vintage_start_in_command_mode": true,
-	"ensure_newline_at_eof_on_save": true
+	"vintage_start_in_command_mode": true
 }
