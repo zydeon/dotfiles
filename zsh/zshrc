@@ -169,6 +169,12 @@ if [[ `uname` = Linux ]]; then
   xmodmap -e "keycode 108 = Return"
 fi
 
+## Alias for open files/explorer etc
+if [[ `uname` = Linux ]]; then
+  alias open="xdg-open"
+fi
+
+
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
 export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
