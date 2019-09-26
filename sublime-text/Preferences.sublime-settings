@@ -9,7 +9,8 @@
 		"treewidth",
 		"arity",
 		"approximability",
-		"surveilling"
+		"surveilling",
+		"online"
 	],
 	"auto_complete_selector": "meta.tag - punctuation.definition.tag.begin, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc, text.tex",
 	"auto_find_in_selection": true,
@@ -52,5 +53,8 @@
 	"tab_size": 2,
 	"theme": "Solarized Space Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"vintage_start_in_command_mode": true
+	"vintage_start_in_command_mode": true,
+
+	// As in Distraction Free mode
+  "draw_centered": true,
 }

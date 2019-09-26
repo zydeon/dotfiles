@@ -171,7 +171,7 @@
          end="0"
          start="0"
          usecurrent="1"
-         open="1" />
+         open="0" />
       <eventcontext
          id="star"
          magnitude="3"
@@ -326,7 +326,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="pt"
+       unit="mm"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -430,7 +430,7 @@
        precision="2"
        scale="100"
        offset="5"
-       unit="pt" />
+       unit="mm" />
   </group>
   <group
      id="palette">
@@ -574,11 +574,11 @@
        panel_mode="1"
        panel_wrap="0"
        panel_border="0"
-       page="2"
+       page="0"
        x="0"
        y="0"
        w="358"
-       h="444"
+       h="485"
        visible="1"
        state="2"
        placement="5" />
@@ -598,7 +598,7 @@
        x="0"
        y="0"
        w="358"
-       h="444"
+       h="192"
        visible="1"
        state="2"
        placement="5" />
@@ -612,7 +612,7 @@
        x="0"
        y="0"
        w="358"
-       h="444"
+       h="485"
        align-to="0"
        visible="1"
        state="2"
@@ -647,9 +647,9 @@
        panel_mode="1"
        panel_wrap="0"
        panel_border="0"
-       x="2224"
+       x="1197"
        y="0"
-       w="570"
+       w="1268"
        h="736"
        visible="0"
        placement="1" />
@@ -661,11 +661,11 @@
        panel_mode="1"
        panel_wrap="0"
        panel_border="0"
-       page="43"
+       page="24"
        x="232"
        y="400"
-       w="815"
-       h="598" />
+       w="1280"
+       h="778" />
     <group
        id="gradienteditor" />
     <group
@@ -695,7 +695,7 @@
        x="0"
        y="0"
        w="358"
-       h="444"
+       h="485"
        visible="1"
        state="2"
        placement="5">
@@ -710,7 +710,7 @@
        default="org.inkscape.output.pdf.cairorenderer"
        append_extension="1"
        enable_preview="1"
-       path="/Users/zydeon/University/PhD/Papers/tracking/images"
+       path="/Users/zydeon/University/PhD/Papers/graph-reconstruction/figures"
        use_current_dir="1" />
     <group
        id="save_copy"
@@ -733,7 +733,8 @@
        id="debug"
        redirect="0" />
     <group
-       id="clonetiler" />
+       id="clonetiler"
+       dotrace="0" />
     <group
        id="gridtiler" />
     <group
@@ -761,11 +762,11 @@
        panel_border="0"
        x="0"
        y="0"
-       w="345"
-       h="409"
+       w="358"
+       h="192"
        visible="1"
-       state="3"
-       placement="1" />
+       state="2"
+       placement="5" />
     <group
        id="extensioneditor" />
     <group
@@ -1082,15 +1083,15 @@
      org.inkscape.output.pdf.cairorenderer.area="drawing" />
   <group
      id="desktop"
-     style="line-height:1.25;fill:#d40000;stroke-width:2.66666667;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dashoffset:0">
+     style="line-height:1.25;fill:#000000;stroke-width:1.00133336;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dashoffset:0">
     <group
-       width="1920"
-       height="1178"
-       x="35"
-       y="46"
+       width="2565"
+       height="1418"
+       x="1380"
+       y="332"
        fullscreen="0"
        id="geometry"
-       maximized="1" />
+       maximized="0" />
     <group
        id="XYfront" />
     <group
