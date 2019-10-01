@@ -35,6 +35,7 @@ brew install zsh \
              gdb \
              `#conan # C++ package manager` \
              tag \
+             tree \
              pandoc pandoc-citeproc
 
 
@@ -63,10 +64,17 @@ pip3 install bpython --user
 pip3 install gdbgui --user --upgrade
 
 
-### Links
+# Default shell
+grep "$(which zsh)" /etc/shells
+if [[ $? -eq 1 ]]; then
+  sudo sh -c "echo $(which zsh) >> /etc/shells"
+  chsh -s `which zsh`
+fi
 
-echo $HOME
-exit 0
+# Copy fonts
+cp $HOME/.dotfiles/fonts/* $HOME/Library/Fonts
+
+### Links
 
 # Setup folders
 mkdir -p $HOME/.config
@@ -80,9 +88,9 @@ rm -rf $HOME/Library/Preferences/com.googlecode.iterm2.plist
 
 # Setup links
 ln -sf $HOME/.dotfiles/sublime-text "$HOME/Library/Application Support/Sublime Text 3/Packages/User" # Install package manager 
-ln -sf $HOME/.dotfiles/inkscape/keys $HOME/.config/inkscape/
-ln -sf $HOME/.dotfiles/inkscape/preferences.xml $HOME/.config/inkscape/
-ln -sf $HOME/.dotfiles/Library/ColorSync/Profiles $HOME/Library/ColorSync/
+ln -sf $HOME/.dotfiles/inkscape/keys $HOME/.config/inkscape/keys
+ln -sf $HOME/.dotfiles/inkscape/preferences.xml $HOME/.config/inkscape/preferences.xml
+ln -sf $HOME/.dotfiles/Library/ColorSync/Profiles $HOME/Library/ColorSync/Profiles
 ln -sf $HOME/.dotfiles/iterm2/com.googlecode.iterm2.plist $HOME/Library/Preferences/
 
 source $HOME/.dotfiles/bootstrap/dotfiles.sh
