@@ -1,62 +1,84 @@
 #!/usr/bin/env bash
 
-# 1 - Install brew
+# Install brew
 
-# 2 - App brews
-brew cask install iterm2 \
-                  spotify \
-                  sublime-text \
-                  dropbox \
-                  spectacle \
-                  flux \
-                  skim \
-                  vlc \
-                  karabiner-elements \
-                  mactex \
-                  xquartz \
-                  inkscape \
-                  nomachine `# remote screen`
+### Cask brews
+cask_brews=(
+  brave-browser
+  dropbox
+  flux
+  inkscape
+  iterm2
+  karabiner-elements
+  mactex
+  nomachine # remote screen
+  skim
+  spectacle
+  spotify
+  sublime-text
+  vlc
+  xquartz
+)
 
-# 3 - Normal brews
-brew install zsh \
-             tmux \
-             reattach-to-user-namespace `# enable subl in tmux` \
-             git \
-             vim \
-             cmake \
-             coreutils `# GNU ls has better color configs` \
-             python `# override MacOS python` \
-             python3 \
-             pypy3 \
-             wget \
-             ruby \
-             colordiff \
-             llvm  `# keep most updated clang` \
-             gdb \
-             `#conan # C++ package manager` \
-             tag \
-             tree \
-             pandoc pandoc-citeproc
+# Added quicklook plugins
+cask_brews+=(
+  qlcolorcode
+  qlimagesize
+  qlmarkdown
+  qlprettypatch
+  qlstephen
+  qlvideo
+  quicklookase
+  quicklook-csv
+  quicklook-json
+  suspicious-package
+  webpquicklook
+)
 
+cask_installed=(`brew cask list`)
 
-# To maintain both clang versions
-# ln -s /usr/local/opt/llvm/bin/clang /usr/local/bin/clang6
+for b in ${cask_brews[@]}; do
+  # Check if brew is in list of installed brews
+  # https://stackoverflow.com/questions/3685970/check-if-a-bash-array-contains-a-value
+  if [[ ! " ${cask_installed[@]} " =~ " ${b} " ]]; then
+    brew cask install ${b}
+  else
+    echo "Cask '${b}' already installed!"
+  fi
+done
 
+### Normal brews
+brews=(
+  cmake
+  colordiff
+  conan # C++ package manager
+  coreutils # GNU ls has better color configs
+  gdb
+  git
+  llvm # keep most updated clang
+  pandoc pandoc-citeproc
+  python # override MacOS python
+  pypy3
+  reattach-to-user-namespace # enable subl in tmux
+  ruby
+  tag
+  tmux
+  tree
+  vim
+  wget
+  zsh
+)
 
+installed=(`brew list`)
 
-
-# Some quicklook plugins
-brew cask install qlcolorcode \
-                  qlstephen \
-                  qlmarkdown \
-                  quicklook-json \
-                  qlprettypatch \
-                  quicklook-csv \
-                  qlimagesize \
-                  webpquicklook \
-                  suspicious-package \
-                  quicklookase \
-                  qlvideo
+for b in ${brews[@]}; do
+  # Check if brew is in list of installed brews
+  if [[ ! " ${installed[@]} " =~ " ${b} " ]]; then
+    brew install ${b}
+  else
+    echo "'${b}' already installed!"
+  fi
+done
 
 
 # Pip
@@ -94,4 +116,5 @@ ln -sf $HOME/.dotfiles/Library/ColorSync/Profiles $HOME/Library/ColorSync/Profil
 ln -sf $HOME/.dotfiles/iterm2/com.googlecode.iterm2.plist $HOME/Library/Preferences/
 ln -sf $HOME/.dotfiles/spectacle/Shortcuts.json "$HOME/Library/Application Support/Spectacle"
 
+# Common dotfiles boostrap
 source $HOME/.dotfiles/bootstrap/dotfiles.sh

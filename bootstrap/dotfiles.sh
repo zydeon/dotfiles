@@ -12,14 +12,15 @@ rm -rf $HOME/.tmux
 rm -rf $HOME/.tmux.conf
 
 # Setup links
+ln -sf $HOME/.dotfiles/.hushlogin $HOME/.hushlogin
+ln -sf $HOME/.dotfiles/ssh/config $HOME/.ssh
 ln -sf $HOME/.dotfiles/dir_colors $HOME/.dir_colors
 ln -sf $HOME/.dotfiles/gdb/gdbinit $HOME/.gdbinit
 ln -sf $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig
-ln -sf $HOME/.dotfiles/.hushlogin $HOME/.hushlogin
 ln -sf $HOME/.dotfiles/lldb/lldbinit $HOME/.lldbinit
-ln -sf $HOME/.dotfiles/zsh/oh-my-zsh $HOME/.oh-my-zsh
 ln -sf $HOME/.dotfiles/vim $HOME/.vim
 ln -sf $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
-ln -sf $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
 ln -sf $HOME/.dotfiles/tmux $HOME/.tmux
 ln -sf $HOME/.dotfiles/tmux/tmux.conf $HOME/.tmux.conf
+ln -sf $HOME/.dotfiles/zsh/oh-my-zsh $HOME/.oh-my-zsh
+ln -sf $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
