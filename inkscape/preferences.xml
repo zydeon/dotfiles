@@ -337,8 +337,8 @@
        style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"
        selcue="1">
       <group
-         id="lineheight"
-         display_unit="0" />
+         display_unit="0"
+         id="lineheight" />
     </eventcontext>
     <eventcontext
        id="nodes"
@@ -425,12 +425,12 @@
        offset="0"
        offsetunits="pt" />
     <group
-       id="measure"
-       fontsize="10"
-       precision="2"
-       scale="100"
+       unit="mm"
        offset="5"
-       unit="mm" />
+       scale="100"
+       precision="2"
+       fontsize="10"
+       id="measure" />
   </group>
   <group
      id="palette">
@@ -574,11 +574,11 @@
        panel_mode="1"
        panel_wrap="0"
        panel_border="0"
-       page="0"
+       page="2"
        x="0"
        y="0"
        w="358"
-       h="485"
+       h="444"
        visible="1"
        state="2"
        placement="5" />
@@ -598,7 +598,7 @@
        x="0"
        y="0"
        w="358"
-       h="192"
+       h="444"
        visible="1"
        state="2"
        placement="5" />
@@ -612,7 +612,7 @@
        x="0"
        y="0"
        w="358"
-       h="485"
+       h="444"
        align-to="0"
        visible="1"
        state="2"
@@ -695,7 +695,7 @@
        x="0"
        y="0"
        w="358"
-       h="485"
+       h="444"
        visible="1"
        state="2"
        placement="5">
@@ -763,7 +763,7 @@
        x="0"
        y="0"
        w="358"
-       h="192"
+       h="444"
        visible="1"
        state="2"
        placement="5" />
@@ -786,8 +786,8 @@
        on-blur="0.50"
        animate-time="100" />
     <group
-       id="printing"
-       asbitmap="0" />
+       asbitmap="0"
+       id="printing" />
   </group>
   <group
      id="printing">
@@ -1083,12 +1083,12 @@
      org.inkscape.output.pdf.cairorenderer.area="drawing" />
   <group
      id="desktop"
-     style="line-height:1.25;fill:#000000;stroke-width:1.00133336;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dashoffset:0">
+     style="line-height:1.25;fill:#000000;stroke-width:1.0015748;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dashoffset:0">
     <group
-       width="2565"
+       width="2567"
        height="1418"
-       x="1380"
-       y="332"
+       x="0"
+       y="0"
        fullscreen="0"
        id="geometry"
        maximized="0" />
