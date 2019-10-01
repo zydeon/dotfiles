@@ -2,6 +2,8 @@
 
 # Install brew
 
+brew update
+
 ### Cask brews
 cask_brews=(
   brave-browser
@@ -13,6 +15,7 @@ cask_brews=(
   mactex
   nomachine # remote screen
   skim
+  slack
   spectacle
   spotify
   sublime-text
@@ -55,6 +58,7 @@ brews=(
   coreutils # GNU ls has better color configs
   gdb
   git
+  hugo
   llvm # keep most updated clang
   pandoc pandoc-citeproc
   python # override MacOS python
