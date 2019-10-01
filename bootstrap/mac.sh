@@ -92,5 +92,6 @@ ln -sf $HOME/.dotfiles/inkscape/keys $HOME/.config/inkscape/keys
 ln -sf $HOME/.dotfiles/inkscape/preferences.xml $HOME/.config/inkscape/preferences.xml
 ln -sf $HOME/.dotfiles/Library/ColorSync/Profiles $HOME/Library/ColorSync/Profiles
 ln -sf $HOME/.dotfiles/iterm2/com.googlecode.iterm2.plist $HOME/Library/Preferences/
+ln -sf $HOME/.dotfiles/spectacle/Shortcuts.json "$HOME/Library/Application Support/Spectacle"
 
 source $HOME/.dotfiles/bootstrap/dotfiles.sh
