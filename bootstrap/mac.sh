@@ -11,9 +11,10 @@ brew cask install iterm2 \
                   flux \
                   skim \
                   vlc \
-                  karabiner \
-                  seil \
+                  karabiner-elements \
                   mactex \
+                  xquartz \
+                  inkscape \
                   nomachine `# remote screen`
 
 # 3 - Normal brews
@@ -50,7 +51,6 @@ brew cask install qlcolorcode \
                   quicklook-json \
                   qlprettypatch \
                   quicklook-csv \
-                  betterzipql \
                   qlimagesize \
                   webpquicklook \
                   suspicious-package \
@@ -63,15 +63,26 @@ pip3 install bpython --user
 pip3 install gdbgui --user --upgrade
 
 
-# Sublime-Text
-cd '$HOME/Library/Application Support/Sublime Text 3/Packages'
-ln -s $HOME/.dotfiles/sublime-text
-mv sublime-text User
-cd
+### Links
 
-# Add Inkscape link
-ln -s $HOME/.dotfiles/inkscape/keys $HOME/.config/inkscape
-ln -s $HOME/.dotfiles/inkscape/preferences.xml $HOME/.config/inkscape
+echo $HOME
+exit 0
 
-# Add Custom Monitor Color Profiles
-ln -s ~/.dotfiles/Library/ColorSync/Profiles ~/Library/ColorSync
+# Setup folders
+mkdir -p $HOME/.config
+
+# Reset links
+rm -rf "$HOME/Library/Application Support/Sublime Text 3/Packages/User"
+rm -rf $HOME/.config/inkscape/keys
+rm -rf $HOME/.config/inkscape/preferences.xml
+rm -rf $HOME/Library/ColorSync/Profiles
+rm -rf $HOME/Library/Preferences/com.googlecode.iterm2.plist
+
+# Setup links
+ln -sf $HOME/.dotfiles/sublime-text "$HOME/Library/Application Support/Sublime Text 3/Packages/User" # Install package manager 
+ln -sf $HOME/.dotfiles/inkscape/keys $HOME/.config/inkscape/
+ln -sf $HOME/.dotfiles/inkscape/preferences.xml $HOME/.config/inkscape/
+ln -sf $HOME/.dotfiles/Library/ColorSync/Profiles $HOME/Library/ColorSync/
+ln -sf $HOME/.dotfiles/iterm2/com.googlecode.iterm2.plist $HOME/Library/Preferences/
+
+source $HOME/.dotfiles/bootstrap/dotfiles.sh
