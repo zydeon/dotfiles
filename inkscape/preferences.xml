@@ -132,8 +132,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="159.956"
-         height="159.956"
+         width="247.181"
+         height="247.181"
          rx="0"
          ry="0" />
       <eventcontext
@@ -574,11 +574,11 @@
        panel_mode="1"
        panel_wrap="0"
        panel_border="0"
-       page="2"
+       page="0"
        x="0"
        y="0"
        w="358"
-       h="444"
+       h="485"
        visible="1"
        state="2"
        placement="5" />
@@ -598,7 +598,7 @@
        x="0"
        y="0"
        w="358"
-       h="444"
+       h="485"
        visible="1"
        state="2"
        placement="5" />
@@ -612,7 +612,7 @@
        x="0"
        y="0"
        w="358"
-       h="444"
+       h="485"
        align-to="0"
        visible="1"
        state="2"
@@ -647,9 +647,9 @@
        panel_mode="1"
        panel_wrap="0"
        panel_border="0"
-       x="1197"
+       x="1932"
        y="0"
-       w="1268"
+       w="1264"
        h="736"
        visible="0"
        placement="1" />
@@ -695,15 +695,16 @@
        x="0"
        y="0"
        w="358"
-       h="444"
+       h="485"
        visible="1"
        state="2"
        placement="5">
       <group
          id="exportarea"
-         value="custom" />
+         value="drawing" />
       <group
-         id="defaultxdpi" />
+         id="defaultxdpi"
+         value="76.51" />
     </group>
     <group
        id="save_as"
@@ -763,7 +764,7 @@
        x="0"
        y="0"
        w="358"
-       h="444"
+       h="485"
        visible="1"
        state="2"
        placement="5" />
@@ -1083,12 +1084,12 @@
      org.inkscape.output.pdf.cairorenderer.area="drawing" />
   <group
      id="desktop"
-     style="line-height:1.25;fill:#000000;stroke-width:1.0015748;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dashoffset:0">
+     style="line-height:1.25;fill:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1;stroke:#1a1a1a;stroke-opacity:1;stroke-dashoffset:0;paint-order:normal;stroke-linecap:round;stroke-linejoin:miter;fill-rule:nonzero">
     <group
-       width="2567"
-       height="1418"
-       x="0"
-       y="0"
+       width="2554"
+       height="1415"
+       x="1342"
+       y="7"
        fullscreen="0"
        id="geometry"
        maximized="0" />
