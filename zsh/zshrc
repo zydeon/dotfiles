@@ -212,3 +212,6 @@ done
 
 # Automatically update git tr
 alias gitr="refresh git --no-pager tr -20"
+
+# Python startup code execution
+export PYTHONSTARTUP=$HOME/.pythonrc.py

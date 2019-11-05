@@ -119,6 +119,7 @@ ln -sf $HOME/.dotfiles/inkscape/preferences.xml $HOME/.config/inkscape/preferenc
 ln -sf $HOME/.dotfiles/Library/ColorSync/Profiles $HOME/Library/ColorSync/Profiles
 ln -sf $HOME/.dotfiles/iterm2/com.googlecode.iterm2.plist $HOME/Library/Preferences/
 ln -sf $HOME/.dotfiles/spectacle/Shortcuts.json "$HOME/Library/Application Support/Spectacle"
+ln -sf $HOME/.dotfiles/python/pythonrc.py "$HOME/.pythonrc.py"
 
 # Common dotfiles boostrap
 source $HOME/.dotfiles/bootstrap/dotfiles.sh
