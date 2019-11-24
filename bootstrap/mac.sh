@@ -19,6 +19,7 @@ cask_brews=(
   spectacle
   spotify
   sublime-text
+  telegram
   thyme
   vlc
   xquartz
