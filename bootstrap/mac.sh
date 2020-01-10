@@ -12,8 +12,8 @@ cask_brews=(
   inkscape
   iterm2
   karabiner-elements
+  macmediakeyforwarder
   mactex
-  nomachine # remote screen
   skim
   slack
   spectacle
