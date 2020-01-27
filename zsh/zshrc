@@ -193,7 +193,7 @@ alias alert="osascript -e 'tell application (path to frontmost application as te
 function refresh() {
 CMD="$@"
 TIME=`date +%s`
-CACHE_FILE=/tmp/`echo "$CMD_$TIME" | sed 's/ /_/g'`
+CACHE_FILE=/tmp/`echo "${CMD}_${TIME}" | sed 's/ /_/g'`
 clear
 eval "$CMD"
 while true; do
