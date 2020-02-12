@@ -16,6 +16,7 @@ cask_brews=(
   mactex
   skim
   slack
+  sourcetree
   spectacle
   spotify
   sublime-text
