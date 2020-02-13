@@ -7,6 +7,7 @@
 	tool = opendiff
 [core]
 	editor = vim
+	excludesfile = /Users/pmatias/.gitignore_global
 [alias]
 	s = status
 	d = diff --word-diff
@@ -34,3 +35,9 @@
 	submodulesummary = 1
 [push]
 	recurseSubmodules = check
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
