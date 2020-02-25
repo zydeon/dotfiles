@@ -62,6 +62,7 @@ brews=(
   gdb
   git
   hugo
+  imagemagick
   llvm # keep most updated clang
   pandoc pandoc-citeproc
   python # override MacOS python
