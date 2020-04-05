@@ -125,5 +125,8 @@ ln -sf $HOME/.dotfiles/iterm2/com.googlecode.iterm2.plist $HOME/Library/Preferen
 ln -sf $HOME/.dotfiles/spectacle/Shortcuts.json "$HOME/Library/Application Support/Spectacle"
 ln -sf $HOME/.dotfiles/python/pythonrc.py "$HOME/.pythonrc.py"
 
+# Copy if links are not working
+cp $HOME/.dotfiles/keylayouts/Mathy.keylayout "$HOME/Library/Keyboard Layouts"
+
 # Common dotfiles boostrap
 source $HOME/.dotfiles/bootstrap/dotfiles.sh

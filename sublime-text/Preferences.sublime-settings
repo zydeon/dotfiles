@@ -49,16 +49,12 @@
 		80,
 		100
 	],
+	"save_on_focus_lost": true,
 	"scroll_past_end": true,
 	"show_minimap": false,
 	"spell_check": false,
 	"tab_size": 2,
 	"theme": "Solarized Space Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"vintage_start_in_command_mode": true,
-
-
-  // Set to true to automatically save files when switching to a different file
-  // or application
-  "save_on_focus_lost": true
+	"vintage_start_in_command_mode": true
 }
