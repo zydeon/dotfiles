@@ -29,7 +29,16 @@
 		"*.o",
 		".DS_Store",
 		"*.class",
-		"*.db"
+		"*.db",
+		"*.lof",
+		"*.lot",
+		"*.fdb_latexmk",
+		"*.aux",
+		"*.fls",
+		"*.bbl",
+		"*.blg",
+		"*.toc",
+		"*.synctex.gz"
 	],
 	"font_face": "Ubuntu Mono",
 	"font_options":
