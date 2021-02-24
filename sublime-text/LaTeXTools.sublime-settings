@@ -491,5 +491,19 @@
 	If the string is invalid the default value (30 minutes) will be used.
 	If you use `infinite` the cache will not invalidated automatically.
 	*/
-	"local_cache_life_span": "30 m"
+	"local_cache_life_span": "30 m",
+
+	"toc_section_commands": [
+		"part",
+		"chapter",
+		"section",
+		"subsection",
+		"subsubsection",
+		"paragraph",
+		"addpart",
+		"addchap",
+		"addsec",
+		"minisec",
+		"label"
+	],
 }

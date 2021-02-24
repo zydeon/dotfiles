@@ -40,4 +40,10 @@
   { "keys": ["super+m", "super+c"], "command": "toggle_bookmark" },
   { "keys": ["super+shift+f2"], "command": "clear_bookmarks" },
   { "keys": ["alt+f2"], "command": "select_all_bookmarks" },
+
+  // Vim keys
+  { "keys": ["super+k", "k"], "command": "travel_to_pane", "args": {"direction": "up"} },
+  { "keys": ["super+k", "l"], "command": "travel_to_pane", "args": {"direction": "right"} },
+  { "keys": ["super+k", "j"], "command": "travel_to_pane", "args": {"direction": "down"} },
+  { "keys": ["super+k", "h"], "command": "travel_to_pane", "args": {"direction": "left"} },
 ]
