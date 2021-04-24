@@ -19,6 +19,7 @@ cask_brews=(
   sourcetree
   spectacle
   spotify
+  spotmenu
   sublime-text
   telegram
   thyme
