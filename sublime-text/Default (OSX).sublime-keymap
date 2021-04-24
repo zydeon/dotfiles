@@ -34,6 +34,12 @@
    ]
   },
 
+  // Text italic
+  { "keys": ["super+l","super+i"],
+    "context":  [
+      {"key": "selector", "operator": "equal", "operand": "text.tex.latex"}],
+    "command": "insert_snippet", "args": {"contents": "\\textit{${1:$SELECTION}}"}},
+
   // Bookmarks
   { "keys": ["super+m", "super+,"], "command": "next_bookmark" },
   { "keys": ["super+m", "super+n"], "command": "prev_bookmark" },
