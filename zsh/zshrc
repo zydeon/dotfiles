@@ -62,7 +62,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux zsh-autosuggestions zsh-syntax-highlighting)
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:$PATH"
 ## Load custom plugins
 source $ZSH/oh-my-zsh.sh
 
