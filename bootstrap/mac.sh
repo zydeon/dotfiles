@@ -65,6 +65,7 @@ brews=(
   hugo
   imagemagick
   llvm # keep most updated clang
+  mosh
   pandoc pandoc-citeproc
   python # override MacOS python
   pypy3
