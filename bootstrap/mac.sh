@@ -20,6 +20,7 @@ cask_brews=(
   spectacle
   spotify
   spotmenu
+  stand
   sublime-text
   telegram
   thyme

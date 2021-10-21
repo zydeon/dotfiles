@@ -4,7 +4,7 @@ TERM=xterm-256color
 export ZSH=${HOME}/.dotfiles/zsh/oh-my-zsh
 
 # zsh tmux settings
-ZSH_TMUX_AUTOSTART='true'
+# ZSH_TMUX_AUTOSTART='true'
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
