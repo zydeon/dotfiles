@@ -9,23 +9,16 @@ cask_brews=(
   brave-browser
   dropbox
   flux
-  inkscape
   iterm2
   karabiner-elements
-  macmediakeyforwarder
   mactex
-  skim
-  slack
   sourcetree
   spectacle
   spotify
   spotmenu
-  stand
   sublime-text
-  telegram
   thyme
   vlc
-  xquartz
 )
 
 # Added quicklook plugins
