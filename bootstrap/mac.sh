@@ -12,8 +12,8 @@ cask_brews=(
   iterm2
   karabiner-elements
   mactex
+  rectangle
   sourcetree
-  spectacle
   spotify
   spotmenu
   sublime-text
@@ -36,13 +36,13 @@ cask_brews+=(
   webpquicklook
 )
 
-cask_installed=(`brew cask list`)
+cask_installed=(`brew casks`)
 
 for b in ${cask_brews[@]}; do
   # Check if brew is in list of installed brews
   # https://stackoverflow.com/questions/3685970/check-if-a-bash-array-contains-a-value
   if [[ ! " ${cask_installed[@]} " =~ " ${b} " ]]; then
-    brew cask install ${b}
+    brew install ${b}
   else
     echo "Cask '${b}' already installed!"
   fi
@@ -54,15 +54,13 @@ brews=(
   colordiff
   conan # C++ package manager
   coreutils # GNU ls has better color configs
-  gdb
   git
   hugo
   imagemagick
   llvm # keep most updated clang
   mosh
-  pandoc pandoc-citeproc
+  pandoc
   python # override MacOS python
-  pypy3
   reattach-to-user-namespace # enable subl in tmux
   ruby
   tag
@@ -85,7 +83,11 @@ for b in ${brews[@]}; do
 done
 
 
+# Vim
+vim -s +'PlugInstall --sync' +qa
+
 # Pip
+python3 -m pip install --upgrade pip
 pip3 install bpython --user
 pip3 install gdbgui --user --upgrade
 
@@ -107,18 +109,13 @@ mkdir -p $HOME/.config
 
 # Reset links
 rm -rf "$HOME/Library/Application Support/Sublime Text 3/Packages/User"
-rm -rf $HOME/.config/inkscape/keys
-rm -rf $HOME/.config/inkscape/preferences.xml
 rm -rf $HOME/Library/ColorSync/Profiles
 rm -rf $HOME/Library/Preferences/com.googlecode.iterm2.plist
 
 # Setup links
-ln -sf $HOME/.dotfiles/sublime-text "$HOME/Library/Application Support/Sublime Text 3/Packages/User" # Install package manager 
-ln -sf $HOME/.dotfiles/inkscape/keys $HOME/.config/inkscape/keys
-ln -sf $HOME/.dotfiles/inkscape/preferences.xml $HOME/.config/inkscape/preferences.xml
+ln -sf $HOME/.dotfiles/sublime-text "$HOME/Library/Application Support/Sublime Text/Packages/User" # Install package manager 
 ln -sf $HOME/.dotfiles/Library/ColorSync/Profiles $HOME/Library/ColorSync/Profiles
 ln -sf $HOME/.dotfiles/iterm2/com.googlecode.iterm2.plist $HOME/Library/Preferences/
-ln -sf $HOME/.dotfiles/spectacle/Shortcuts.json "$HOME/Library/Application Support/Spectacle"
 ln -sf $HOME/.dotfiles/python/pythonrc.py "$HOME/.pythonrc.py"
 
 # Copy if links are not working
