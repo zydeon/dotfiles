@@ -188,7 +188,7 @@ noremap  <Leader>y "+yy
 """""""""""""""""" Theme
 syntax on
 " Change theme according to dark/light setting
-if !empty(glob("/$HOME/.dotfiles/.darker"))
+if !empty(glob("/$HOME/.darkerrrr"))
   set background=dark
 else
   set background=light
