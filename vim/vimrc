@@ -187,7 +187,12 @@ noremap  <Leader>y "+yy
 
 """""""""""""""""" Theme
 syntax on
-set background=light
+" Change theme according to dark/light setting
+if !empty(glob("/$HOME/.dotfiles/.darker"))
+  set background=dark
+else
+  set background=light
+endif
 colorscheme solarized
 " Always have status line
 set laststatus=2
