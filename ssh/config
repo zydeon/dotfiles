@@ -1,20 +1,2 @@
-Host dei
-	HostName student.dei.uc.pt
-	User pamatias
-Host mosal-old
-	HostName mosal-old.dei.uc.pt
-	User pedromatias
-Host mosal
-    HostName mosal.dei.uc.pt
-	User admin
-Host ics
-	HostName openlab.ics.uci.edu
-	User pmatias
-Host google
-	HostName 35.233.140.57
-	User pedro
-Host redwood
-  HostName redwood.ics.uci.edu
-  User git
 Host *
   UseKeychain yes
