@@ -232,5 +232,8 @@ alias lighterrrr="tmux set-env -g BGCOLOR white && tmux source $HOME/.dotfiles/t
 # VScode
 PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
 
+# Add custom homebrew bin folder
+PATH="$HOME/homebrew/bin:$PATH"
+
 # Export PATH
 export PATH
