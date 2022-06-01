@@ -18,6 +18,7 @@ cask_brews=(
   spotmenu
   sublime-text
   thyme
+  visual-studio-code
   vlc
 )
 
