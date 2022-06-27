@@ -43,4 +43,9 @@
      // Formatting
      "editor.formatOnSave": true,
      "python.formatting.provider": "black"
+
+    // Hide certain files from side bar
+    "files.exclude": {
+        "**/__pycache__": true
+    }
  }
