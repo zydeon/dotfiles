@@ -10,6 +10,9 @@
      "interactive-smartlog.pull": "arc pull",
      "interactive-smartlog.fetch": "jf get",
      "ml-workbench.frameworksConfigurations.secureGroup": "",
+  
+     // Add new line at end of file
+     "files.insertFinalNewline": true
 
      // Editor
      "editor.find.loop": false,
