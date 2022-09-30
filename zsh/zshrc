@@ -219,6 +219,7 @@ export PYTHONSTARTUP=$HOME/.pythonrc.py
 # Opt-out of Homebrew analytics collection
 export HOMEBREW_NO_ANALYTICS=1
 
-# Slurm settings
-# Change format to include number of gpu's used
+# slurm: Change squeue format to include number of gpu's used
 export SQUEUE_FORMAT="%.18i %.9P %.8j %.8u %.2t %.10M %.6D %.15b %.36R"
+# slurm: Change squeue to sort by (partition, job status, user)
+export SQUEUE_SORT="P,t,U"
