@@ -189,29 +189,8 @@ alias xclip='xclip -sel clip'
 # Alert 
 alias alert="osascript -e 'tell application (path to frontmost application as text) to display dialog \"Done\" buttons {\"OK\"} with icon stop'"
 
-# Automatically update command
-function refresh() {
-CMD="$@"
-TIME=`date +%s`
-CACHE_FILE=/tmp/`echo "${CMD}_${TIME}" | sed 's/ /_/g'`
-clear
-eval "$CMD"
-while true; do
-  sleep 1
-  # Save current output
-  eval "$CMD" &> "${CACHE_FILE}.new"
-
-  # # Update if output different than cache
-  if ! diff "$CACHE_FILE" "${CACHE_FILE}.new" &> /dev/null; then
-    clear
-    cp "${CACHE_FILE}.new" "$CACHE_FILE"
-    eval "$CMD"  # Instead of `cat` for colorized output
-  fi
-done
-}
-
 # Automatically update git tr
-alias gitr="refresh git --no-pager tr -20"
+alias gitr="watch -n1 -c git --no-pager tr -20"
 
 # Python startup code execution
 export PYTHONSTARTUP=$HOME/.pythonrc.py

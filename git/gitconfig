@@ -2,7 +2,8 @@
 	name = Pedro Matias
 	email = pedro@pmatias.com
 [color]
-	ui = true
+	ui = always
+  status = always
 [merge]
 	tool = opendiff
 [core]
