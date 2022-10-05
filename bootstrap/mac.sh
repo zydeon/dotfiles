@@ -8,7 +8,6 @@ brew update
 cask_brews=(
   brave-browser
   dropbox
-  flux
   iterm2
   karabiner-elements
   mactex
