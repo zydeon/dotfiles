@@ -10,7 +10,6 @@ cask_brews=(
   karabiner-elements
   mactex
   rectangle
-  sourcetree
   spotify
   spotmenu
   thyme
