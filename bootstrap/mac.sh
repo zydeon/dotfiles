@@ -6,8 +6,6 @@ brew update
 
 ### Cask brews
 cask_brews=(
-  brave-browser
-  dropbox
   iterm2
   karabiner-elements
   mactex
@@ -15,7 +13,6 @@ cask_brews=(
   sourcetree
   spotify
   spotmenu
-  sublime-text
   thyme
   visual-studio-code
   vlc
@@ -55,11 +52,9 @@ brews=(
   conan # C++ package manager
   coreutils # GNU ls has better color configs
   git
-  hugo
   imagemagick
   llvm # keep most updated clang
   mosh
-  pandoc
   python # override MacOS python
   reattach-to-user-namespace # enable subl in tmux
   ruby
