@@ -116,5 +116,8 @@ ln -sf $HOME/.dotfiles/python/pythonrc.py "$HOME/.pythonrc.py"
 # Copy if links are not working
 cp $HOME/.dotfiles/keylayouts/Mathy.keylayout "$HOME/Library/Keyboard Layouts"
 
+# Make toggle dark mode script executable
+chmod +x $HOME/.dotfiles/scripts/darkerrrr.sh
+
 # Common dotfiles boostrap
 source $HOME/.dotfiles/bootstrap/dotfiles.sh
