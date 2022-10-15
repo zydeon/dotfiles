@@ -62,6 +62,7 @@ brews=(
   tmux
   tree
   vim
+  watch  # unix watch command
   wget
   zsh
 )
