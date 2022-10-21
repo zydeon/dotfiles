@@ -213,3 +213,17 @@ trash = function () {
     mv $p "$HOME/.__trash/$now/$root" 
   done
 }
+
+# FileMerge from clipboard
+filemerge = function () {
+    local file1_path=/tmp/__file1__.txt
+    local file2_path=/tmp/__file2__.txt
+
+    read -p "file 1 in clipboard? [ENTER]"
+    pbpaste > $file1_path
+
+    read -p "file 2 in clipboard? [ENTER]"
+    pbpaste > $file2_path
+
+    opendiff $file1_path $file2_path
+}
