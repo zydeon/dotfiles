@@ -14,8 +14,7 @@ export ZSH=${HOME}/.dotfiles/zsh/oh-my-zsh
 # Setup options for agnoster theme
 VIRTUAL_ENV_DISABLE_PROMPT=1
 DEFAULT_USER=`whoami`
-SOLARIZED_THEME="light"
-ZSH_THEME="agnoster"
+SOLARIZED_THEME="light" ZSH_THEME="agnoster"
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -219,10 +218,10 @@ filemerge = function () {
     local file1_path=/tmp/__file1__.txt
     local file2_path=/tmp/__file2__.txt
 
-    read -p "file 1 in clipboard? [ENTER]"
+    read "?file 1 in clipboard? [ENTER]"
     pbpaste > $file1_path
 
-    read -p "file 2 in clipboard? [ENTER]"
+    read "?file 2 in clipboard? [ENTER]"
     pbpaste > $file2_path
 
     opendiff $file1_path $file2_path
