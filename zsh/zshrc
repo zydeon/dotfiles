@@ -204,12 +204,14 @@ export SQUEUE_SORT="P,t,U"
 
 # safe replacement of rm
 trash = function () {
-  local now=`date +%m-%d-%Y/%H%M.%S`
+  local now=`date +%Y-%m-%d/%H%M.%S`
   local p  # so it doesn't interfere with outside variables
   for p in "$@"; do
     root=`dirname $p`
-    mkdir -p "$HOME/.__trash/$now/$root"
-    mv $p "$HOME/.__trash/$now/$root" 
+    trash_dir="$HOME/.__trash/$now/$root"
+    mkdir -p $trash_dir
+    mv $p $trash_dir
+    echo "trashed into $trash_dir"
   done
 }
 
