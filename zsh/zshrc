@@ -228,3 +228,7 @@ filemerge = function () {
 
     opendiff $file1_path $file2_path
 }
+
+# Tmux alias to switch themes
+alias darkerrrr="tmux set-env -g BGCOLOR black && tmux source $HOME/.dotfiles/tmux/tmux_colors.conf"
+alias lighterrrr="tmux set-env -g BGCOLOR white && tmux source $HOME/.dotfiles/tmux/tmux_colors.conf"
