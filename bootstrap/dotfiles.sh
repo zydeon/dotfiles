@@ -10,6 +10,7 @@ rm -rf $HOME/.vimrc
 rm -rf $HOME/.zshrc
 rm -rf $HOME/.tmux
 rm -rf $HOME/.tmux.conf
+rm -rf $HOME/Library/Application\ Support/Code/User/settings.json
 
 # Setup links
 ln -sf $HOME/.dotfiles/.hushlogin $HOME/.hushlogin
@@ -24,3 +25,4 @@ ln -sf $HOME/.dotfiles/tmux $HOME/.tmux
 ln -sf $HOME/.dotfiles/tmux/tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/.dotfiles/zsh/oh-my-zsh $HOME/.oh-my-zsh
 ln -sf $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
+ln -sf $HOME/.dotfiles/vscode/settings.json $HOME/Library/Application\ Support/Code/User
