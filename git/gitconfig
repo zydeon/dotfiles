@@ -12,6 +12,7 @@
 [alias]
 	s = status
 	d = diff --word-diff
+  h = !diff2html -s side
 	ci = commit --verbose
 	co = checkout
 	b = branch -vv
