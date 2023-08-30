@@ -12,7 +12,7 @@
 [alias]
 	s = status
 	d = diff --word-diff
-  h = !diff2html -s side
+  h = !diff2html -s side --hwt $HOME/.dotfiles/git/diff2html_template.html
 	ci = commit --verbose
 	co = checkout
 	b = branch -vv
