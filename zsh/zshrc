@@ -140,7 +140,7 @@ bindkey \^D kill-word
 
 
 ### PATH
-PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:$PATH"
+PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$PATH"
 PATH=$PATH:/Library/TeX/texbin
 PATH=/usr/local/opt/python/libexec/bin:$PATH
 
