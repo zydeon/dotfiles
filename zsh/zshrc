@@ -213,16 +213,16 @@ trash = function () {
 
 # FileMerge from clipboard
 filemerge = function () {
-    local file1_path=/tmp/__file1__.txt
-    local file2_path=/tmp/__file2__.txt
+    local fileL_path=/tmp/__fileL__.txt
+    local fileR_path=/tmp/__fileR__.txt
 
-    read "?file 1 in clipboard? [ENTER]"
-    pbpaste > $file1_path
+    read "?file LEFT in clipboard? [ENTER]"
+    pbpaste > $fileL_path
 
-    read "?file 2 in clipboard? [ENTER]"
-    pbpaste > $file2_path
+    read "?file RIGHT in clipboard? [ENTER]"
+    pbpaste > $fileR_path
 
-    opendiff $file1_path $file2_path
+    opendiff $fileL_path $fileR_path
 }
 
 # Tmux alias to switch themes
