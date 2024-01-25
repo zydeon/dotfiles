@@ -238,3 +238,7 @@ PATH="$HOME/homebrew/opt/python@3.9/libexec/bin:$PATH"
 
 # Export PATH
 export PATH
+
+# Conda
+# avoid activating base env by default
+export CONDA_AUTO_ACTIVATE_BASE=false
