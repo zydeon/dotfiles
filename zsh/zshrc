@@ -234,7 +234,7 @@ PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Add custom homebrew bin folder
 PATH="/opt/homebrew/bin:$PATH"
-PATH="$HOME/homebrew/opt/python@3.9/libexec/bin:$PATH"
+PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
 
 # Export PATH
 export PATH
