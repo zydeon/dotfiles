@@ -108,7 +108,7 @@ elif ls -G -d . >/dev/null 2>&1; then
   alias ls='gls --color=auto -F'   # use GNU coreutils ls
 fi
 alias ll='ls -lh'
-alias la='ls -lAFh'
+alias la='ls -laFh'
 alias tree='tree -CF'
 if [[ `uname` = Darwin ]]; then
   alias sb='reattach-to-user-namespace subl' # enable subl inside tmux
