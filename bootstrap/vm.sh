@@ -31,6 +31,7 @@ ln -s $HOME/.dotfiles/zsh/oh-my-zsh $HOME/.oh-my-zsh
 rm -rf $HOME/.vim && ln -s $HOME/.dotfiles/vim $HOME/.vim
 ln -s $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
 ln -s $HOME/.dotfiles/zsh/zshrc $HOME/.zshrc
+ln -s $HOME/.dotfiles/pdb/pdbrc $HOME/.pdbrc
 
 # Tmux
 ln -s $HOME/.dotfiles/tmux $HOME/.tmux
