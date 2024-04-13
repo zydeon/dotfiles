@@ -19,17 +19,17 @@ cask_brews=(
 
 # Added quicklook plugins
 cask_brews+=(
-  qlcolorcode
   qlimagesize
   qlmarkdown
   qlprettypatch
-  qlstephen
   qlvideo
   quicklookase
   quicklook-csv
   quicklook-json
   suspicious-package
   webpquicklook
+  # qlstephen
+  # qlcolorcode
 )
 
 cask_installed=(`brew casks`)
