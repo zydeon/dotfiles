@@ -194,7 +194,7 @@ export PYTHONSTARTUP=$HOME/.pythonrc.py
 export HOMEBREW_NO_ANALYTICS=1
 
 # slurm: Change squeue format to include number of gpu's used
-export SQUEUE_FORMAT="%.18i %.9P %.8j %.8u %.2t %.10M %.6D %.15b %.36R"
+export SQUEUE_FORMAT="%.30j %.2t %.10i %.10Q %.10u %.10M %.6D %.15b %.50R %.9P"
 # slurm: Change squeue to sort by (partition, job status, user)
 export SQUEUE_SORT="P,t,U"
 
