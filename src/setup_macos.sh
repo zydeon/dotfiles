@@ -129,7 +129,41 @@ defaults write com.apple.dock autohide-time-modifier -float 0.5
 # to reset: defaults delete com.apple.dock "autohide-time-modifier"
 
 ############################################
-# Activate                                 #
+# Night shift                              #
+############################################
+
+# source: https://github.com/LukeChannings/dotfiles/blob/7cb3171b5354761c9aef7b6f1094019ef8701a17/install.macos#L413-L433
+CORE_BRIGHTNESS="/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
+ENABLE='{
+CBBlueLightReductionCCTTargetRaw = 4100;
+CBBlueReductionStatus =         {
+    AutoBlueReductionEnabled = 1;
+    BlueLightReductionDisableScheduleAlertCounter = 3;
+    BlueLightReductionSchedule =             {
+        DayStartHour = 4;
+        DayStartMinute = 0;
+        NightStartHour = 4;
+        NightStartMinute = 1;
+    };
+    BlueReductionAvailable = 1;
+    BlueReductionEnabled = 1;
+    BlueReductionMode = 2;
+    BlueReductionSunScheduleAllowed = 1;
+    Version = 1;
+};
+}'
+
+_UID=$(dscl . -read ~ GeneratedUID | sed 's/GeneratedUID: //')
+sudo defaults write $CORE_BRIGHTNESS "CBUser-0" "$ENABLE"
+sudo defaults write $CORE_BRIGHTNESS "CBUser-$_UID" "$ENABLE"
+
+# above does not get triggered even with below commands.
+# TODO: figure out why
+# killall cfprefsd
+# sudo killall corebrightnessd
+
+############################################
+# Done                                     #
 ############################################
 
 # Activate settings without needing to log out/in
