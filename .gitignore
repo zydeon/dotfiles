@@ -17,10 +17,7 @@ tags
 
 # bim stuff
 *~
-*.swm
-*.swn
-*.swo
-*.swp
+*.sw*
 
 # vim
 vim/.netrwhist
