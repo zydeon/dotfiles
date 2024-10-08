@@ -15,7 +15,11 @@ sublime-text/Color Highlight.cache
 # ctags
 tags
 
+# bim stuff
 *~
+*.swm
+*.swn
+*.swo
 *.swp
 
 # vim
