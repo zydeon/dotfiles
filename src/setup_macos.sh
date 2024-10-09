@@ -4,7 +4,8 @@
 
 # To find out which settings exist
 # 1. defaults read > /tmp/settings.plist
-# 2. change settings and then: plutil -p ~/Library/Preferences/ByHost/.GlobalPreferences.${UUID}.plist
+# 2. sudo defaults read > /tmp/settings_sudo.plist
+# 3. change settings and then: plutil -p ~/Library/Preferences/ByHost/.GlobalPreferences.${UUID}.plist
 
 echo "Setting up macos..."
 
@@ -33,6 +34,7 @@ APPLESCRIPT
 
 add_login_item SpotMenu /Applications/SpotMenu.app true
 add_login_item Spotify /Applications/Spotify.app false
+add_login_item Thyme /Applications/Thyme.app false
 
 ############################################
 # Finder                                   #
@@ -94,8 +96,37 @@ plutil -replace "com\.apple\.keyboard\.modifiermapping\.0-0-0" \
  "HIDKeyboardModifierMappingSrc": 30064771129
 }]' \
 ~/Library/Preferences/ByHost/.GlobalPreferences.${__UUID__}.plist
-# Pretty print
-# plutil -p ~/Library/Preferences/ByHost/.GlobalPreferences.${__UUID__}.plist 
+# Pretty print: plutil -p ~/Library/Preferences/ByHost/.GlobalPreferences.${__UUID__}.plist
+
+############################################
+# Input sources                            #
+############################################
+
+# Show in menu bar
+defaults write com.apple.TextInputMenu visible -bool true
+defaults write com.apple.TextInputMenuAgent "NSStatusItem Visible Item-0" -bool true
+
+# Add languages
+add_input_source () {
+  _layout_name=$1
+  _layout_id=$2
+  _entry="<dict>
+    <key>InputSourceKind</key><string>Keyboard Layout</string>
+    <key>KeyboardLayout ID</key><integer>$_layout_id</integer>
+    <key>KeyboardLayout Name</key><string>$_layout_name</string>
+  </dict>"
+
+  # only add if not already present
+  if ! defaults read com.apple.HIToolbox AppleEnabledInputSources | grep -q $_layout_name; then
+    defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add $_entry
+    echo "Added input source $_layout_name."
+  else
+    echo "Input source $_layout_name already present."
+  fi
+}
+
+add_input_source Greek -18944
+add_input_source Portuguese 10
 
 ############################################
 # Mouse, trackpad                          #
@@ -133,34 +164,29 @@ defaults write com.apple.dock autohide-time-modifier -float 0.5
 ############################################
 
 # source: https://github.com/LukeChannings/dotfiles/blob/7cb3171b5354761c9aef7b6f1094019ef8701a17/install.macos#L413-L433
-CORE_BRIGHTNESS="/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
-ENABLE='{
-CBBlueLightReductionCCTTargetRaw = 4100;
-CBBlueReductionStatus =         {
-    AutoBlueReductionEnabled = 1;
-    BlueLightReductionDisableScheduleAlertCounter = 3;
-    BlueLightReductionSchedule =             {
-        DayStartHour = 4;
-        DayStartMinute = 0;
-        NightStartHour = 4;
-        NightStartMinute = 1;
-    };
-    BlueReductionAvailable = 1;
-    BlueReductionEnabled = 1;
-    BlueReductionMode = 2;
-    BlueReductionSunScheduleAllowed = 1;
-    Version = 1;
-};
-}'
+CORE_BRIGHTNESS_PLIST="/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
+_night_shift="<dict>
+  <key>CBBlueLightReductionCCTTargetRaw</key><integer>4100</integer>
+  <key>CBBlueReductionStatus</key><dict>
+    <key>AutoBlueReductionEnabled</key><integer>1</integer>
+    <key>BlueLightReductionDisableScheduleAlertCounter</key><integer>3</integer>
+    <key>BlueLightReductionSchedule</key><dict>
+      <key>DayStartHour</key><integer>4</integer>
+      <key>DayStartMinute</key><integer>0</integer>
+      <key>NightStartHour</key><integer>4</integer>
+      <key>NightStartMinute</key><integer>1</integer>
+    </dict>
+    <key>BlueReductionAvailable</key><integer>1</integer>
+    <key>BlueReductionEnabled</key><integer>1</integer>
+    <key>BlueReductionMode</key><integer>2</integer>
+    <key>BlueReductionSunScheduleAllowed</key><integer>1</integer>
+    <key>Version</key><integer>1</integer>
+  </dict>
+</dict>"
 
 _UID=$(dscl . -read ~ GeneratedUID | sed 's/GeneratedUID: //')
-sudo defaults write $CORE_BRIGHTNESS "CBUser-0" "$ENABLE"
-sudo defaults write $CORE_BRIGHTNESS "CBUser-$_UID" "$ENABLE"
-
-# above does not get triggered even with below commands.
-# TODO: figure out why
-# killall cfprefsd
-# sudo killall corebrightnessd
+sudo defaults write $CORE_BRIGHTNESS_PLIST "CBUser-$_UID" $_night_shift
+sudo killall corebrightnessd  # to activate settings
 
 ############################################
 # Done                                     #
