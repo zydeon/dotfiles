@@ -140,8 +140,11 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -bool tru
 # Dock                                     #
 ############################################
 
-# Only open applications
-defaults write com.apple.dock static-only -bool true
+# No persistent apps, but also no downloads folder
+# defaults write com.apple.dock static-only -bool true
+
+# No persistent apps, but with downloads folder
+defaults write com.apple.dock persistent-apps -array
 
 # Size
 defaults write com.apple.dock tilesize -int 60
