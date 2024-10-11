@@ -163,6 +163,49 @@ defaults write com.apple.dock autohide-time-modifier -float 0.5
 # to reset: defaults delete com.apple.dock "autohide-time-modifier"
 
 ############################################
+# Hot corners                              #
+############################################
+
+# Corner values
+#  0: no-op
+#  2: Mission Control
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+# 13: Lock Screen
+# 14: Quick Note
+
+# Modifier values
+# 0: no modifier keys
+# 262144: Ctrl-key
+# 524288: Alt-key
+# 1048576: Cmd-key
+# 131072: Shift-key
+# (keys to hold while pointing to corner)
+# (it's also possible to do combinations of up to all 4 modifers)
+
+# Remove all shortcuts
+for _corner in tl tr bl br; do
+  defaults delete com.apple.dock wvous-$_corner-corner
+  defaults delete com.apple.dock wvous-$_corner-modifier
+done
+
+# Add shortcuts
+
+# Top right + cmd → Lock screen
+defaults write com.apple.dock wvous-tr-corner -int 13
+defaults write com.apple.dock wvous-tr-modifier -int 1048576
+
+# Bottom right + cmd → Quick note
+defaults write com.apple.dock wvous-br-corner -int 14
+defaults write com.apple.dock wvous-br-modifier -int 1048576
+
+############################################
 # Night shift                              #
 ############################################
 
