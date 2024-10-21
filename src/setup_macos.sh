@@ -1,6 +1,7 @@
 # sources:
 # 1. https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 # 2. https://macos-defaults.com/
+# 3. https://github.com/janka102/dotfiles/blob/master/defaults.sh
 
 # To find out which settings exist
 # 1. defaults read > /tmp/settings.plist
@@ -135,6 +136,20 @@ add_input_source Portuguese 10
 # Tap to click
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -bool true
+
+# Enable mission control, app expose
+defaults write com.apple.dock showMissionControlGestureEnabled -bool true
+defaults write com.apple.dock showAppExposeGestureEnabled -bool true
+
+# Use 3-finger for mission control, app expose
+# (-int 0 for 4-finger)
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 2
+
+# Disable 2-finger Notification Center
+defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 0
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 0
+
 
 ############################################
 # Dock                                     #
