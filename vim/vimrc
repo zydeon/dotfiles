@@ -176,7 +176,7 @@ noremap <silent> <A-n> <C-w><C-w>
 noremap <silent> <A-p> <C-w><S-w>
 
 " Set mapping timeout delays
-set timeoutlen=1000
+set timeoutlen=300
 " Set key code delays
 set ttimeoutlen=10
 
