@@ -229,6 +229,9 @@ filemerge = function () {
 alias darkerrrr="tmux set-env -g BGCOLOR black && tmux source $HOME/.dotfiles/tmux/tmux_colors.conf && touch $HOME/.darkerrrr"
 alias lighterrrr="tmux set-env -g BGCOLOR white && tmux source $HOME/.dotfiles/tmux/tmux_colors.conf && rm $HOME/.darkerrrr"
 
+# Tmux alias to arrange panes
+alias panes="$HOME/.dotfiles/scripts/panes.sh"
+
 # VScode
 PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
 
