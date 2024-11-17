@@ -24,3 +24,6 @@ vim/.netrwhist
 
 # Tmux Resurrect
 tmux/resurrect
+
+# ssh
+ssh/other

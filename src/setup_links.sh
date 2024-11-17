@@ -16,6 +16,9 @@ rm -rf $HOME/.tmux.conf
 rm -rf $HOME/Library/Application\ Support/Code/User/settings.json
 
 # Setup links
+ln -sf $HOME/.dotfiles/.hushlogin $HOME/.hushlogin
+ln -sf $HOME/.dotfiles/ssh/config $HOME/.ssh
+ln -sf $HOME/.dotfiles/ssh/other $HOME/.ssh
 ln -sf $HOME/.dotfiles/dir_colors $HOME/.dir_colors
 ln -sf $HOME/.dotfiles/gdb/gdbinit $HOME/.gdbinit
 ln -sf $HOME/.dotfiles/git/gitconfig $HOME/.gitconfig

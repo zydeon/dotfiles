@@ -1,3 +1,4 @@
+Include other
 Host *
   IgnoreUnknown AddKeysToAgent,UseKeychain
   AddKeysToAgent yes
