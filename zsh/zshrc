@@ -1,5 +1,9 @@
 TERM=xterm-256color
 
+# locale
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Path to your oh-my-zsh installation.
 export ZSH=${HOME}/.dotfiles/zsh/oh-my-zsh
 
@@ -14,7 +18,11 @@ export ZSH=${HOME}/.dotfiles/zsh/oh-my-zsh
 # Setup options for agnoster theme
 VIRTUAL_ENV_DISABLE_PROMPT=1
 DEFAULT_USER=`whoami`
-SOLARIZED_THEME="light" ZSH_THEME="agnoster"
+SOLARIZED_THEME="light"
+if [ -f $HOME/.darkerrrr ]; then
+  SOLARIZED_THEME="dark"
+fi
+ZSH_THEME="agnoster"
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -119,20 +127,6 @@ alias egrep='egrep --color=always'  # show colors when piping to less
 alias ql='qlmanage -p "$@" > /dev/null 2>&1'
 alias ip='ifconfig | colout "[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+"'
 
-### Functions
-function sms() {
-  # Using tmobile provider. For a more elaborate list, check lib/carries.js in
-  # https://github.com/typpo/textbelt
-  provider=tmomail.net
-
-  if [[ $# -lt 1 ]]; then
-    echo "Usage: $0 <phone number>"
-  fi
-  # TODO: check that it's a valid phone number
-  mail -s "txt" $1@$provider
-}
-
-
 # Delete to beginning of line
 bindkey \^U backward-kill-line
 # Delete next word
@@ -226,8 +220,20 @@ filemerge = function () {
 }
 
 # Tmux alias to switch themes
-alias darkerrrr="tmux set-env -g BGCOLOR black && tmux source $HOME/.dotfiles/tmux/tmux_colors.conf && touch $HOME/.darkerrrr"
-alias lighterrrr="tmux set-env -g BGCOLOR white && tmux source $HOME/.dotfiles/tmux/tmux_colors.conf && rm $HOME/.darkerrrr"
+unset darkerrrr
+darkerrrr() {
+  tmux set-env -g BGCOLOR black \
+  && tmux source $HOME/.dotfiles/tmux/tmux_colors.conf \
+  && touch $HOME/.darkerrrr \
+  && source $HOME/.zshrc
+}
+unset lighterrrr
+lighterrrr() {
+  tmux set-env -g BGCOLOR white \
+  && tmux source $HOME/.dotfiles/tmux/tmux_colors.conf \
+  && rm -rf $HOME/.darkerrrr \
+  && source $HOME/.zshrc
+}
 
 # Tmux alias to arrange panes
 alias panes="$HOME/.dotfiles/scripts/panes.sh"
