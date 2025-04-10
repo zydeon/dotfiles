@@ -27,6 +27,7 @@ cask_brews=(
   thyme
   visual-studio-code
   # vlc
+  electric-sheep  # cool screensaver
 )
 
 # Add quicklook plugins
