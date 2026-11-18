@@ -5,6 +5,7 @@ source src/setup_vim.sh
 source src/setup_links.sh
 source src/setup_iterm.sh
 source src/setup_macos.sh
+source src/setup_python.sh
 source ~/.zshrc
 
 # Default shell
