@@ -9,6 +9,14 @@
 [core]
 	editor = vim
 	excludesfile = /Users/pmatias/.gitignore_global
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true  # use n and N to move between diff sections
+  side-by-side = true
+  line-numbers = true
+  detect-dark-light = auto   # or always / never
 [alias]
 	s = status
 	d = diff --word-diff

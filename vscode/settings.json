@@ -45,7 +45,7 @@
     "python.linting.flake8Args": [
         "--max-line-length=100",
     ],
-    "python.defaultInterpreterPath": "/Users/pmatias/homebrew/opt/python@3.9/libexec/bin/python",
+    // "python.defaultInterpreterPath": "/Users/pmatias/homebrew/opt/python@3.9/libexec/bin/python",
     "python.formatting.blackArgs": [
         "--line-length",
         "100"
@@ -58,4 +58,12 @@
     "security.workspace.trust.untrustedFiles": "open",
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
+    "python-envs.workspaceSearchPaths": [
+        "./**/.venv",
+        ".pixi/envs/**"
+    ],
+    "python-envs.defaultEnvManager": "renan-r-santos.pixi-code:pixi",
+    "python-envs.defaultPackageManager": "renan-r-santos.pixi-code:pixi",
+    "editor.lineHeight": 1.7,
+    "workbench.tree.indent": 16
 }
